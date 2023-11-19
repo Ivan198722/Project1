@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6674ad3ca3004409b1d5ea25877b9dfe" Name="Diagram1">
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.Employee" Width="1.5" PointX="3.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.PositionsAndPay" Width="1.5" PointX="6.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.April_2023" Width="1.5" PointX="6.125" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.August_2023" Width="1.5" PointX="12.875" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.December_2023" Width="1.5" PointX="5.25" PointY="38.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.February_2023" Width="1.5" PointX="2.875" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.January_2023" Width="1.5" PointX="1.125" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.July_2023" Width="1.5" PointX="11.125" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.June_2023" Width="1.5" PointX="9.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.March_2023" Width="1.5" PointX="4.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.May_2023" Width="1.5" PointX="7.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.November_2023" Width="1.5" PointX="4.875" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.October_2023" Width="1.5" PointX="3.125" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.Register" Width="1.5" PointX="1.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.September_2023" Width="1.5" PointX="1.125" PointY="20.625" IsExpanded="true" />
+        <AssociationConnector Association="PayrollTrackingDBModel.FK__April_202__IdEmp__2BC97F7C" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollTrackingDBModel.FK__August_20__IdEmp__21D600EE" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollTrackingDBModel.FK__December___IdEmp__15FA39EE" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollTrackingDBModel.FK__Employee__IdPosi__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollTrackingDBModel.FK__February___IdEmp__31B762FC" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollTrackingDBModel.FK__January_2__IdEmp__797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollTrackingDBModel.FK__July_2023__IdEmp__63D8CE75" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollTrackingDBModel.FK__June_2023__IdEmp__25DB9BFC" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollTrackingDBModel.FK__March_202__IdEmp__6FB49575" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollTrackingDBModel.FK__May_2023__IdEmpl__69C6B1F5" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollTrackingDBModel.FK__November___IdEmp__57FD0775" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollTrackingDBModel.FK__October_2__IdEmp__1BE81D6E" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollTrackingDBModel.FK__September__IdEmp__5DEAEAF5" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

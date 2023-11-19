@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\MyProject\\PayrollTrackingApp1\\PayrollTrackingApp1\\PayrollTrackingApp1.csproj": {}
+  },
+  "projects": {
+    "C:\\MyProject\\PayrollTrackingApp1\\PayrollTrackingApp1\\PayrollTrackingApp1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\MyProject\\PayrollTrackingApp1\\PayrollTrackingApp1\\PayrollTrackingApp1.csproj",
+        "projectName": "PayrollTrackingApp1",
+        "projectPath": "C:\\MyProject\\PayrollTrackingApp1\\PayrollTrackingApp1\\PayrollTrackingApp1.csproj",
+        "packagesPath": "C:\\Users\\stadn\\.nuget\\packages\\",
+        "outputPath": "C:\\MyProject\\PayrollTrackingApp1\\PayrollTrackingApp1\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\stadn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "EntityFramework.ru": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
