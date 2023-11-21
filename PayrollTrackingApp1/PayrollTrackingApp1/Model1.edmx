@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Хранилище PayrollTrackingDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище PayrollTrackingDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Ошибки, обнаруженные при создании:
 предупреждение 6002: В таблице или представлении "PayrollTrackingDB.dbo.April_2023" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
         <EntityType Name="April_2023">
@@ -848,6 +848,14 @@
           <Property Name="login_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="pasword_user" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="SalaryBonuses">
+          <Key>
+            <PropertyRef Name="BonusID" />
+          </Key>
+          <Property Name="BonusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BonusName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Percentage %" Type="int" Nullable="false" />
+        </EntityType>
         <!--Ошибки, обнаруженные при создании:
 предупреждение 6002: В таблице или представлении "PayrollTrackingDB.dbo.September_2023" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
         <EntityType Name="September_2023">
@@ -1080,6 +1088,7 @@
         <EntityContainer Name="Хранилище PayrollTrackingDBModelContainer">
           <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PositionsAndPay" EntityType="Self.PositionsAndPay" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SalaryBonuses" EntityType="Self.SalaryBonuses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="April_2023" EntityType="Self.April_2023" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [April_2023].[Id] AS [Id], 
@@ -1966,7 +1975,8 @@
             <End Role="September_2023" EntitySet="September_2023" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PayrollTrackingDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -2001,6 +2011,14 @@
           <Property Name="PositionHame" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="HourlySalary" Type="Decimal" Precision="6" Scale="2" />
           <NavigationProperty Name="Employees" Relationship="Self.FK__Employee__IdPosi__3A81B327" FromRole="PositionsAndPay" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="SalaryBonus">
+          <Key>
+            <PropertyRef Name="BonusID" />
+          </Key>
+          <Property Name="BonusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BonusName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Percentage__" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="April_2023">
           <Key>
@@ -3042,9 +3060,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="PayrollTrackingDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="PayrollTrackingDBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Employees" EntityType="Self.Employee" />
           <EntitySet Name="PositionsAndPays" EntityType="Self.PositionsAndPay" />
+          <EntitySet Name="SalaryBonuses" EntityType="Self.SalaryBonus" />
           <EntitySet Name="April_2023" EntityType="Self.April_2023" />
           <EntitySet Name="August_2023" EntityType="Self.August_2023" />
           <EntitySet Name="December_2023" EntityType="Self.December_2023" />
@@ -3116,7 +3135,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище PayrollTrackingDBModelContainer" CdmEntityContainer="PayrollTrackingDBEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище PayrollTrackingDBModelContainer" CdmEntityContainer="PayrollTrackingDBEntities1">
           <EntitySetMapping Name="Employees">
             <EntityTypeMapping TypeName="PayrollTrackingDBModel.Employee">
               <MappingFragment StoreEntitySet="Employee">
@@ -3134,6 +3153,15 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="PositionHame" ColumnName="PositionHame" />
                 <ScalarProperty Name="HourlySalary" ColumnName="HourlySalary" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SalaryBonuses">
+            <EntityTypeMapping TypeName="PayrollTrackingDBModel.SalaryBonus">
+              <MappingFragment StoreEntitySet="SalaryBonuses">
+                <ScalarProperty Name="BonusID" ColumnName="BonusID" />
+                <ScalarProperty Name="BonusName" ColumnName="BonusName" />
+                <ScalarProperty Name="Percentage__" ColumnName="Percentage %" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

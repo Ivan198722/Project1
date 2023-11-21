@@ -4,22 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6674ad3ca3004409b1d5ea25877b9dfe" Name="Diagram1">
-        <EntityTypeShape EntityType="PayrollTrackingDBModel.Employee" Width="1.5" PointX="3.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="PayrollTrackingDBModel.PositionsAndPay" Width="1.5" PointX="6.25" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="PayrollTrackingDBModel.April_2023" Width="1.5" PointX="6.125" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="PayrollTrackingDBModel.August_2023" Width="1.5" PointX="12.875" PointY="6" IsExpanded="true" />
+      <Diagram DiagramId="d264dd25841d47b7b92bfb56f0711ccc" Name="Diagram1">
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.Employee" Width="1.5" PointX="3" PointY="93.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.PositionsAndPay" Width="1.5" PointX="0.75" PointY="94.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.SalaryBonus" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.April_2023" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.August_2023" Width="1.5" PointX="5.25" PointY="23.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PayrollTrackingDBModel.December_2023" Width="1.5" PointX="5.25" PointY="38.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="PayrollTrackingDBModel.February_2023" Width="1.5" PointX="2.875" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="PayrollTrackingDBModel.January_2023" Width="1.5" PointX="1.125" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="PayrollTrackingDBModel.July_2023" Width="1.5" PointX="11.125" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="PayrollTrackingDBModel.June_2023" Width="1.5" PointX="9.5" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="PayrollTrackingDBModel.March_2023" Width="1.5" PointX="4.5" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="PayrollTrackingDBModel.May_2023" Width="1.5" PointX="7.75" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="PayrollTrackingDBModel.November_2023" Width="1.5" PointX="4.875" PointY="20.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="PayrollTrackingDBModel.October_2023" Width="1.5" PointX="3.125" PointY="20.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="PayrollTrackingDBModel.Register" Width="1.5" PointX="1.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="PayrollTrackingDBModel.September_2023" Width="1.5" PointX="1.125" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.February_2023" Width="1.5" PointX="5.25" PointY="53" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.January_2023" Width="1.5" PointX="5.25" PointY="66.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.July_2023" Width="1.5" PointX="5.25" PointY="81.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.June_2023" Width="1.5" PointX="5.25" PointY="95.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.March_2023" Width="1.5" PointX="5.25" PointY="110.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.May_2023" Width="1.5" PointX="5.25" PointY="124.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.November_2023" Width="1.5" PointX="5.25" PointY="139.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.October_2023" Width="1.5" PointX="5.25" PointY="153.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.Register" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.September_2023" Width="1.5" PointX="5.25" PointY="168.375" IsExpanded="true" />
         <AssociationConnector Association="PayrollTrackingDBModel.FK__April_202__IdEmp__2BC97F7C" ManuallyRouted="false" />
         <AssociationConnector Association="PayrollTrackingDBModel.FK__August_20__IdEmp__21D600EE" ManuallyRouted="false" />
         <AssociationConnector Association="PayrollTrackingDBModel.FK__December___IdEmp__15FA39EE" ManuallyRouted="false" />

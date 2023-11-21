@@ -1,0 +1,17 @@
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\bin\Debug\PayrollTrackingApp1.exe.config
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\bin\Debug\PayrollTrackingApp1.exe
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\bin\Debug\PayrollTrackingApp1.pdb
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\bin\Debug\EntityFramework.SqlServer.dll
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\bin\Debug\EntityFramework.dll
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\bin\Debug\ru\EntityFramework.resources.dll
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.csproj.AssemblyReference.cache
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.Authorization.resources
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.Properties.Resources.resources
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.csproj.GenerateResource.cache
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.csproj.CoreCompileInputs.cache
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.csproj.CopyComplete
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.exe
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.pdb
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.PayrollTrackingApp.resources
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.Employee_Information.resources

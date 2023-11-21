@@ -13,10 +13,10 @@ namespace PayrollTrackingApp1
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PayrollTrackingDBEntities : DbContext
+    public partial class PayrollTrackingDBEntities1 : DbContext
     {
-        public PayrollTrackingDBEntities()
-            : base("name=PayrollTrackingDBEntities")
+        public PayrollTrackingDBEntities1()
+            : base("name=PayrollTrackingDBEntities1")
         {
         }
     
@@ -27,6 +27,7 @@ namespace PayrollTrackingApp1
     
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<PositionsAndPay> PositionsAndPays { get; set; }
+        public virtual DbSet<SalaryBonus> SalaryBonuses { get; set; }
         public virtual DbSet<April_2023> April_2023 { get; set; }
         public virtual DbSet<August_2023> August_2023 { get; set; }
         public virtual DbSet<December_2023> December_2023 { get; set; }
