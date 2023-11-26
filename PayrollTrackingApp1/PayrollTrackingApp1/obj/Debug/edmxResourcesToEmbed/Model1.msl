@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Employees">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.Employee">
         <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="FName" ColumnName="FName" />
           <ScalarProperty Name="LName" ColumnName="LName" />
@@ -15,9 +16,9 @@
     <EntitySetMapping Name="PositionsAndPays">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.PositionsAndPay">
         <MappingFragment StoreEntitySet="PositionsAndPay">
+          <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+          <ScalarProperty Name="HourlySalary___" ColumnName="HourlySalary($)" />
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="PositionHame" ColumnName="PositionHame" />
-          <ScalarProperty Name="HourlySalary" ColumnName="HourlySalary" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -33,9 +34,9 @@
     <EntitySetMapping Name="April_2023">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.April_2023">
         <MappingFragment StoreEntitySet="April_2023">
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
-          <ScalarProperty Name="EmploeeName" ColumnName="EmploeeName" />
           <ScalarProperty Name="C1" ColumnName="1" />
           <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
           <ScalarProperty Name="C2" ColumnName="2" />
@@ -103,9 +104,9 @@
     <EntitySetMapping Name="August_2023">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.August_2023">
         <MappingFragment StoreEntitySet="August_2023">
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
-          <ScalarProperty Name="EmploeeName" ColumnName="EmploeeName" />
           <ScalarProperty Name="C1" ColumnName="1" />
           <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
           <ScalarProperty Name="C2" ColumnName="2" />
@@ -175,9 +176,9 @@
     <EntitySetMapping Name="December_2023">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.December_2023">
         <MappingFragment StoreEntitySet="December_2023">
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
-          <ScalarProperty Name="EmploeeName" ColumnName="EmploeeName" />
           <ScalarProperty Name="C1" ColumnName="1" />
           <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
           <ScalarProperty Name="C2" ColumnName="2" />
@@ -247,9 +248,9 @@
     <EntitySetMapping Name="February_2023">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.February_2023">
         <MappingFragment StoreEntitySet="February_2023">
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
-          <ScalarProperty Name="EmploeeName" ColumnName="EmploeeName" />
           <ScalarProperty Name="C1" ColumnName="1" />
           <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
           <ScalarProperty Name="C2" ColumnName="2" />
@@ -313,9 +314,9 @@
     <EntitySetMapping Name="January_2023">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.January_2023">
         <MappingFragment StoreEntitySet="January_2023">
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
-          <ScalarProperty Name="EmploeeName" ColumnName="EmploeeName" />
           <ScalarProperty Name="C1" ColumnName="1" />
           <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
           <ScalarProperty Name="C2" ColumnName="2" />
@@ -385,9 +386,9 @@
     <EntitySetMapping Name="July_2023">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.July_2023">
         <MappingFragment StoreEntitySet="July_2023">
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
-          <ScalarProperty Name="EmploeeName" ColumnName="EmploeeName" />
           <ScalarProperty Name="C1" ColumnName="1" />
           <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
           <ScalarProperty Name="C2" ColumnName="2" />
@@ -457,9 +458,9 @@
     <EntitySetMapping Name="June_2023">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.June_2023">
         <MappingFragment StoreEntitySet="June_2023">
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
-          <ScalarProperty Name="EmploeeName" ColumnName="EmploeeName" />
           <ScalarProperty Name="C1" ColumnName="1" />
           <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
           <ScalarProperty Name="C2" ColumnName="2" />
@@ -527,9 +528,9 @@
     <EntitySetMapping Name="March_2023">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.March_2023">
         <MappingFragment StoreEntitySet="March_2023">
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
-          <ScalarProperty Name="EmploeeName" ColumnName="EmploeeName" />
           <ScalarProperty Name="C1" ColumnName="1" />
           <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
           <ScalarProperty Name="C2" ColumnName="2" />
@@ -599,9 +600,9 @@
     <EntitySetMapping Name="May_2023">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.May_2023">
         <MappingFragment StoreEntitySet="May_2023">
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
-          <ScalarProperty Name="EmploeeName" ColumnName="EmploeeName" />
           <ScalarProperty Name="C1" ColumnName="1" />
           <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
           <ScalarProperty Name="C2" ColumnName="2" />
@@ -671,9 +672,9 @@
     <EntitySetMapping Name="November_2023">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.November_2023">
         <MappingFragment StoreEntitySet="November_2023">
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
-          <ScalarProperty Name="EmploeeName" ColumnName="EmploeeName" />
           <ScalarProperty Name="C1" ColumnName="1" />
           <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
           <ScalarProperty Name="C2" ColumnName="2" />
@@ -741,9 +742,9 @@
     <EntitySetMapping Name="October_2023">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.October_2023">
         <MappingFragment StoreEntitySet="October_2023">
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
-          <ScalarProperty Name="EmploeeName" ColumnName="EmploeeName" />
           <ScalarProperty Name="C1" ColumnName="1" />
           <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
           <ScalarProperty Name="C2" ColumnName="2" />
@@ -822,9 +823,9 @@
     <EntitySetMapping Name="September_2023">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.September_2023">
         <MappingFragment StoreEntitySet="September_2023">
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
-          <ScalarProperty Name="EmploeeName" ColumnName="EmploeeName" />
           <ScalarProperty Name="C1" ColumnName="1" />
           <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
           <ScalarProperty Name="C2" ColumnName="2" />

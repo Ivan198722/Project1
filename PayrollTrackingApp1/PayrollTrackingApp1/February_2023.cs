@@ -74,6 +74,7 @@ namespace PayrollTrackingApp1
         public Nullable<int> C28 { get; set; }
         public Nullable<decimal> C28DailiSalary { get; set; }
         public Nullable<decimal> MonthiySalary { get; set; }
+        public string EmployeeName { get; set; }
     
         public virtual Employee Employee { get; set; }
     }

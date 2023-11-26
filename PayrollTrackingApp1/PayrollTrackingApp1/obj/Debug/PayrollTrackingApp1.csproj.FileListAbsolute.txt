@@ -15,3 +15,5 @@ C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingAp
 C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.pdb
 C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.PayrollTrackingApp.resources
 C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.Employee_Information.resources
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.Regisration.resources
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.Positional_Rates.resources

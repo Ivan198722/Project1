@@ -25,6 +25,17 @@ namespace PayrollTrackingApp1
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+            if (!Application.OpenForms.OfType<Regisration>().Any())
+
+                new Regisration().Show();
+        }
+
+        private void employeeInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (!Application.OpenForms.OfType<Employee_Information>().Any())
+
+                new Employee_Information().Show();
         }
     }
 }

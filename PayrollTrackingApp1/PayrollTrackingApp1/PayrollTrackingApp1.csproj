@@ -128,17 +128,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PayrollTrackingDBDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PayrollTrackingDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PayrollTrackingDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Positional Rates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Positional Rates.Designer.cs">
+      <DependentUpon>Positional Rates.cs</DependentUpon>
+    </Compile>
     <Compile Include="PositionsAndPay.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regisration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Regisration.Designer.cs">
+      <DependentUpon>Regisration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Register.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="SalaryBonus.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="SalaryCalculator.cs" />
     <Compile Include="September_2023.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -151,6 +169,9 @@
     <EmbeddedResource Include="PayrollTrackingApp.resx">
       <DependentUpon>PayrollTrackingApp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Positional Rates.resx">
+      <DependentUpon>Positional Rates.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -160,6 +181,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Regisration.resx">
+      <DependentUpon>Regisration.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -188,6 +212,17 @@
     </None>
     <None Include="PayrollTrackingDBDataSet1.xss">
       <DependentUpon>PayrollTrackingDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PayrollTrackingDBDataSet2.xsc">
+      <DependentUpon>PayrollTrackingDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PayrollTrackingDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PayrollTrackingDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PayrollTrackingDBDataSet2.xss">
+      <DependentUpon>PayrollTrackingDBDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

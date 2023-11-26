@@ -16,7 +16,7 @@ namespace PayrollTrackingApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Employee_Information());
+            Application.Run(new Positional_Rates());
         }
     }
 }

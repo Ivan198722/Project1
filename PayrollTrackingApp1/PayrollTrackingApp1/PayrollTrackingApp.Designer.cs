@@ -47,6 +47,8 @@
             this.octoberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.decemberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salarySettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.positionalRatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bonusSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,7 +76,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.employeeInformationToolStripMenuItem,
             this.timekeepingLedgerToolStripMenuItem,
-            this.bonusSettingsToolStripMenuItem});
+            this.salarySettingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1797, 28);
@@ -88,6 +90,7 @@
             this.employeeInformationToolStripMenuItem.Name = "employeeInformationToolStripMenuItem";
             this.employeeInformationToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
             this.employeeInformationToolStripMenuItem.Text = "Employee Information";
+            this.employeeInformationToolStripMenuItem.Click += new System.EventHandler(this.employeeInformationToolStripMenuItem_Click);
             // 
             // timekeepingLedgerToolStripMenuItem
             // 
@@ -180,10 +183,25 @@
             this.decemberToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.decemberToolStripMenuItem.Text = "December";
             // 
+            // salarySettingsToolStripMenuItem
+            // 
+            this.salarySettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.positionalRatesToolStripMenuItem,
+            this.bonusSettingsToolStripMenuItem});
+            this.salarySettingsToolStripMenuItem.Name = "salarySettingsToolStripMenuItem";
+            this.salarySettingsToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
+            this.salarySettingsToolStripMenuItem.Text = "Salary Settings";
+            // 
+            // positionalRatesToolStripMenuItem
+            // 
+            this.positionalRatesToolStripMenuItem.Name = "positionalRatesToolStripMenuItem";
+            this.positionalRatesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.positionalRatesToolStripMenuItem.Text = "Positional Rates";
+            // 
             // bonusSettingsToolStripMenuItem
             // 
             this.bonusSettingsToolStripMenuItem.Name = "bonusSettingsToolStripMenuItem";
-            this.bonusSettingsToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
+            this.bonusSettingsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.bonusSettingsToolStripMenuItem.Text = "Bonus Settings";
             // 
             // linkLabel1
@@ -238,7 +256,9 @@
         private System.Windows.Forms.ToolStripMenuItem octoberToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novemberToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem decemberToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bonusSettingsToolStripMenuItem;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ToolStripMenuItem salarySettingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem positionalRatesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bonusSettingsToolStripMenuItem;
     }
 }

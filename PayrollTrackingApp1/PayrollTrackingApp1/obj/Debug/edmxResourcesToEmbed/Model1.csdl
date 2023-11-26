@@ -22,6 +22,7 @@
     <NavigationProperty Name="November_2023" Relationship="Self.FK__November___IdEmp__57FD0775" FromRole="Employee" ToRole="November_2023" />
     <NavigationProperty Name="October_2023" Relationship="Self.FK__October_2__IdEmp__1BE81D6E" FromRole="Employee" ToRole="October_2023" />
     <NavigationProperty Name="September_2023" Relationship="Self.FK__September__IdEmp__5DEAEAF5" FromRole="Employee" ToRole="September_2023" />
+    <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="PositionsAndPay">
     <Key>
@@ -31,6 +32,8 @@
     <Property Name="PositionHame" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="HourlySalary" Type="Decimal" Precision="6" Scale="2" />
     <NavigationProperty Name="Employees" Relationship="Self.FK__Employee__IdPosi__3A81B327" FromRole="PositionsAndPay" ToRole="Employee" />
+    <Property Name="HourlySalary___" Type="Decimal" Precision="6" Scale="2" />
+    <Property Name="PositionName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="SalaryBonus">
     <Key>
@@ -45,6 +48,7 @@
       <PropertyRef Name="Id" />
       <PropertyRef Name="IdEmployee" />
       <PropertyRef Name="EmploeeName" />
+      <PropertyRef Name="EmployeeName" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IdEmployee" Type="Int32" Nullable="false" />
@@ -111,12 +115,14 @@
     <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__April_202__IdEmp__2BC97F7C" FromRole="April_2023" ToRole="Employee" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="August_2023">
     <Key>
       <PropertyRef Name="Id" />
       <PropertyRef Name="IdEmployee" />
       <PropertyRef Name="EmploeeName" />
+      <PropertyRef Name="EmployeeName" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IdEmployee" Type="Int32" Nullable="false" />
@@ -185,12 +191,14 @@
     <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__August_20__IdEmp__21D600EE" FromRole="August_2023" ToRole="Employee" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="December_2023">
     <Key>
       <PropertyRef Name="Id" />
       <PropertyRef Name="IdEmployee" />
       <PropertyRef Name="EmploeeName" />
+      <PropertyRef Name="EmployeeName" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IdEmployee" Type="Int32" Nullable="false" />
@@ -259,12 +267,14 @@
     <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__December___IdEmp__15FA39EE" FromRole="December_2023" ToRole="Employee" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="February_2023">
     <Key>
       <PropertyRef Name="Id" />
       <PropertyRef Name="IdEmployee" />
       <PropertyRef Name="EmploeeName" />
+      <PropertyRef Name="EmployeeName" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IdEmployee" Type="Int32" Nullable="false" />
@@ -327,12 +337,14 @@
     <Property Name="C28DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__February___IdEmp__31B762FC" FromRole="February_2023" ToRole="Employee" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="January_2023">
     <Key>
       <PropertyRef Name="Id" />
       <PropertyRef Name="IdEmployee" />
       <PropertyRef Name="EmploeeName" />
+      <PropertyRef Name="EmployeeName" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IdEmployee" Type="Int32" Nullable="false" />
@@ -401,12 +413,14 @@
     <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__January_2__IdEmp__797309D9" FromRole="January_2023" ToRole="Employee" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="July_2023">
     <Key>
       <PropertyRef Name="Id" />
       <PropertyRef Name="IdEmployee" />
       <PropertyRef Name="EmploeeName" />
+      <PropertyRef Name="EmployeeName" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IdEmployee" Type="Int32" Nullable="false" />
@@ -475,12 +489,14 @@
     <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__July_2023__IdEmp__63D8CE75" FromRole="July_2023" ToRole="Employee" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="June_2023">
     <Key>
       <PropertyRef Name="Id" />
       <PropertyRef Name="IdEmployee" />
       <PropertyRef Name="EmploeeName" />
+      <PropertyRef Name="EmployeeName" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IdEmployee" Type="Int32" Nullable="false" />
@@ -547,12 +563,14 @@
     <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__June_2023__IdEmp__25DB9BFC" FromRole="June_2023" ToRole="Employee" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="March_2023">
     <Key>
       <PropertyRef Name="Id" />
       <PropertyRef Name="IdEmployee" />
       <PropertyRef Name="EmploeeName" />
+      <PropertyRef Name="EmployeeName" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IdEmployee" Type="Int32" Nullable="false" />
@@ -621,12 +639,14 @@
     <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__March_202__IdEmp__6FB49575" FromRole="March_2023" ToRole="Employee" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="May_2023">
     <Key>
       <PropertyRef Name="Id" />
       <PropertyRef Name="IdEmployee" />
       <PropertyRef Name="EmploeeName" />
+      <PropertyRef Name="EmployeeName" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IdEmployee" Type="Int32" Nullable="false" />
@@ -695,12 +715,14 @@
     <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__May_2023__IdEmpl__69C6B1F5" FromRole="May_2023" ToRole="Employee" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="November_2023">
     <Key>
       <PropertyRef Name="Id" />
       <PropertyRef Name="IdEmployee" />
       <PropertyRef Name="EmploeeName" />
+      <PropertyRef Name="EmployeeName" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IdEmployee" Type="Int32" Nullable="false" />
@@ -767,12 +789,14 @@
     <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__November___IdEmp__57FD0775" FromRole="November_2023" ToRole="Employee" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="October_2023">
     <Key>
       <PropertyRef Name="Id" />
       <PropertyRef Name="IdEmployee" />
       <PropertyRef Name="EmploeeName" />
+      <PropertyRef Name="EmployeeName" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IdEmployee" Type="Int32" Nullable="false" />
@@ -841,6 +865,7 @@
     <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__October_2__IdEmp__1BE81D6E" FromRole="October_2023" ToRole="Employee" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Register">
     <Key>
@@ -857,6 +882,7 @@
       <PropertyRef Name="Id" />
       <PropertyRef Name="IdEmployee" />
       <PropertyRef Name="EmploeeName" />
+      <PropertyRef Name="EmployeeName" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IdEmployee" Type="Int32" Nullable="false" />
@@ -923,6 +949,7 @@
     <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__September__IdEmp__5DEAEAF5" FromRole="September_2023" ToRole="Employee" />
+    <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="FK__April_202__IdEmp__2BC97F7C">
     <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
