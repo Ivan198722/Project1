@@ -16,7 +16,7 @@ namespace PayrollTrackingApp1
     {
         public int Id { get; set; }
         public int IdEmployee { get; set; }
-        public string EmploeeName { get; set; }
+        public string EmployeeName { get; set; }
         public Nullable<int> C1 { get; set; }
         public Nullable<decimal> C1DailiSalary { get; set; }
         public Nullable<int> C2 { get; set; }
@@ -78,7 +78,6 @@ namespace PayrollTrackingApp1
         public Nullable<int> C30 { get; set; }
         public Nullable<decimal> C30DailiSalary { get; set; }
         public Nullable<decimal> MonthiySalary { get; set; }
-        public string EmployeeName { get; set; }
     
         public virtual Employee Employee { get; set; }
     }

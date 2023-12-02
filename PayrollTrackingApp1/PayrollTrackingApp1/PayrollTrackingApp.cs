@@ -37,5 +37,11 @@ namespace PayrollTrackingApp1
 
                 new Employee_Information().Show();
         }
+
+        private void positionalRatesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<Position_Rates>().Any())
+                new Position_Rates ().Show();
+        }
     }
 }

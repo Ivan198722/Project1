@@ -1,0 +1,894 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище PayrollTrackingDBModelContainer" CdmEntityContainer="PayrollTrackingDBEntities">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="IdPosition" ColumnName="IdPosition" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PositionsAndPays">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.PositionsAndPay">
+        <MappingFragment StoreEntitySet="PositionsAndPay">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+          <ScalarProperty Name="HourlySalary___" ColumnName="HourlySalary($)" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalaryBonuses">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.SalaryBonus">
+        <MappingFragment StoreEntitySet="SalaryBonuses">
+          <ScalarProperty Name="BonusID" ColumnName="BonusID" />
+          <ScalarProperty Name="BonusName" ColumnName="BonusName" />
+          <ScalarProperty Name="Percentage__" ColumnName="Percentage %" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="April_2023">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.April_2023">
+        <MappingFragment StoreEntitySet="April_2023">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="C1" ColumnName="1" />
+          <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
+          <ScalarProperty Name="C2" ColumnName="2" />
+          <ScalarProperty Name="C2DailiSalary" ColumnName="2DailiSalary" />
+          <ScalarProperty Name="C3" ColumnName="3" />
+          <ScalarProperty Name="C3DailiSalary" ColumnName="3DailiSalary" />
+          <ScalarProperty Name="C4" ColumnName="4" />
+          <ScalarProperty Name="C4DailiSalary" ColumnName="4DailiSalary" />
+          <ScalarProperty Name="C5" ColumnName="5" />
+          <ScalarProperty Name="C5DailiSalary" ColumnName="5DailiSalary" />
+          <ScalarProperty Name="C6" ColumnName="6" />
+          <ScalarProperty Name="C6DailiSalary" ColumnName="6DailiSalary" />
+          <ScalarProperty Name="C7" ColumnName="7" />
+          <ScalarProperty Name="C7DailiSalary" ColumnName="7DailiSalary" />
+          <ScalarProperty Name="C8" ColumnName="8" />
+          <ScalarProperty Name="C8DailiSalary" ColumnName="8DailiSalary" />
+          <ScalarProperty Name="C9" ColumnName="9" />
+          <ScalarProperty Name="C9DailiSalary" ColumnName="9DailiSalary" />
+          <ScalarProperty Name="C10" ColumnName="10" />
+          <ScalarProperty Name="C10DailiSalary" ColumnName="10DailiSalary" />
+          <ScalarProperty Name="C11" ColumnName="11" />
+          <ScalarProperty Name="C11DailiSalary" ColumnName="11DailiSalary" />
+          <ScalarProperty Name="C12" ColumnName="12" />
+          <ScalarProperty Name="C12DailiSalary" ColumnName="12DailiSalary" />
+          <ScalarProperty Name="C13" ColumnName="13" />
+          <ScalarProperty Name="C13DailiSalary" ColumnName="13DailiSalary" />
+          <ScalarProperty Name="C14" ColumnName="14" />
+          <ScalarProperty Name="C14DailiSalary" ColumnName="14DailiSalary" />
+          <ScalarProperty Name="C15" ColumnName="15" />
+          <ScalarProperty Name="C15DailiSalary" ColumnName="15DailiSalary" />
+          <ScalarProperty Name="C16" ColumnName="16" />
+          <ScalarProperty Name="C16DailiSalary" ColumnName="16DailiSalary" />
+          <ScalarProperty Name="C17" ColumnName="17" />
+          <ScalarProperty Name="C17DailiSalary" ColumnName="17DailiSalary" />
+          <ScalarProperty Name="C18" ColumnName="18" />
+          <ScalarProperty Name="C18DailiSalary" ColumnName="18DailiSalary" />
+          <ScalarProperty Name="C19" ColumnName="19" />
+          <ScalarProperty Name="C19DailiSalary" ColumnName="19DailiSalary" />
+          <ScalarProperty Name="C20" ColumnName="20" />
+          <ScalarProperty Name="C20DailiSalary" ColumnName="20DailiSalary" />
+          <ScalarProperty Name="C21" ColumnName="21" />
+          <ScalarProperty Name="C21DailiSalary" ColumnName="21DailiSalary" />
+          <ScalarProperty Name="C22" ColumnName="22" />
+          <ScalarProperty Name="C22DailiSalary" ColumnName="22DailiSalary" />
+          <ScalarProperty Name="C23" ColumnName="23" />
+          <ScalarProperty Name="C23DailiSalary" ColumnName="23DailiSalary" />
+          <ScalarProperty Name="C24" ColumnName="24" />
+          <ScalarProperty Name="C24DailiSalary" ColumnName="24DailiSalary" />
+          <ScalarProperty Name="C25" ColumnName="25" />
+          <ScalarProperty Name="C25DailiSalary" ColumnName="25DailiSalary" />
+          <ScalarProperty Name="C26" ColumnName="26" />
+          <ScalarProperty Name="C26DailiSalary" ColumnName="26DailiSalary" />
+          <ScalarProperty Name="C27" ColumnName="27" />
+          <ScalarProperty Name="C27DailiSalary" ColumnName="27DailiSalary" />
+          <ScalarProperty Name="C28" ColumnName="28" />
+          <ScalarProperty Name="C28DailiSalary" ColumnName="28DailiSalary" />
+          <ScalarProperty Name="C29" ColumnName="29" />
+          <ScalarProperty Name="C29DailiSalary" ColumnName="29DailiSalary" />
+          <ScalarProperty Name="C30" ColumnName="30" />
+          <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
+          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="August_2023">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.August_2023">
+        <MappingFragment StoreEntitySet="August_2023">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="C1" ColumnName="1" />
+          <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
+          <ScalarProperty Name="C2" ColumnName="2" />
+          <ScalarProperty Name="C2DailiSalary" ColumnName="2DailiSalary" />
+          <ScalarProperty Name="C3" ColumnName="3" />
+          <ScalarProperty Name="C3DailiSalary" ColumnName="3DailiSalary" />
+          <ScalarProperty Name="C4" ColumnName="4" />
+          <ScalarProperty Name="C4DailiSalary" ColumnName="4DailiSalary" />
+          <ScalarProperty Name="C5" ColumnName="5" />
+          <ScalarProperty Name="C5DailiSalary" ColumnName="5DailiSalary" />
+          <ScalarProperty Name="C6" ColumnName="6" />
+          <ScalarProperty Name="C6DailiSalary" ColumnName="6DailiSalary" />
+          <ScalarProperty Name="C7" ColumnName="7" />
+          <ScalarProperty Name="C7DailiSalary" ColumnName="7DailiSalary" />
+          <ScalarProperty Name="C8" ColumnName="8" />
+          <ScalarProperty Name="C8DailiSalary" ColumnName="8DailiSalary" />
+          <ScalarProperty Name="C9" ColumnName="9" />
+          <ScalarProperty Name="C9DailiSalary" ColumnName="9DailiSalary" />
+          <ScalarProperty Name="C10" ColumnName="10" />
+          <ScalarProperty Name="C10DailiSalary" ColumnName="10DailiSalary" />
+          <ScalarProperty Name="C11" ColumnName="11" />
+          <ScalarProperty Name="C11DailiSalary" ColumnName="11DailiSalary" />
+          <ScalarProperty Name="C12" ColumnName="12" />
+          <ScalarProperty Name="C12DailiSalary" ColumnName="12DailiSalary" />
+          <ScalarProperty Name="C13" ColumnName="13" />
+          <ScalarProperty Name="C13DailiSalary" ColumnName="13DailiSalary" />
+          <ScalarProperty Name="C14" ColumnName="14" />
+          <ScalarProperty Name="C14DailiSalary" ColumnName="14DailiSalary" />
+          <ScalarProperty Name="C15" ColumnName="15" />
+          <ScalarProperty Name="C15DailiSalary" ColumnName="15DailiSalary" />
+          <ScalarProperty Name="C16" ColumnName="16" />
+          <ScalarProperty Name="C16DailiSalary" ColumnName="16DailiSalary" />
+          <ScalarProperty Name="C17" ColumnName="17" />
+          <ScalarProperty Name="C17DailiSalary" ColumnName="17DailiSalary" />
+          <ScalarProperty Name="C18" ColumnName="18" />
+          <ScalarProperty Name="C18DailiSalary" ColumnName="18DailiSalary" />
+          <ScalarProperty Name="C19" ColumnName="19" />
+          <ScalarProperty Name="C19DailiSalary" ColumnName="19DailiSalary" />
+          <ScalarProperty Name="C20" ColumnName="20" />
+          <ScalarProperty Name="C20DailiSalary" ColumnName="20DailiSalary" />
+          <ScalarProperty Name="C21" ColumnName="21" />
+          <ScalarProperty Name="C21DailiSalary" ColumnName="21DailiSalary" />
+          <ScalarProperty Name="C22" ColumnName="22" />
+          <ScalarProperty Name="C22DailiSalary" ColumnName="22DailiSalary" />
+          <ScalarProperty Name="C23" ColumnName="23" />
+          <ScalarProperty Name="C23DailiSalary" ColumnName="23DailiSalary" />
+          <ScalarProperty Name="C24" ColumnName="24" />
+          <ScalarProperty Name="C24DailiSalary" ColumnName="24DailiSalary" />
+          <ScalarProperty Name="C25" ColumnName="25" />
+          <ScalarProperty Name="C25DailiSalary" ColumnName="25DailiSalary" />
+          <ScalarProperty Name="C26" ColumnName="26" />
+          <ScalarProperty Name="C26DailiSalary" ColumnName="26DailiSalary" />
+          <ScalarProperty Name="C27" ColumnName="27" />
+          <ScalarProperty Name="C27DailiSalary" ColumnName="27DailiSalary" />
+          <ScalarProperty Name="C28" ColumnName="28" />
+          <ScalarProperty Name="C28DailiSalary" ColumnName="28DailiSalary" />
+          <ScalarProperty Name="C29" ColumnName="29" />
+          <ScalarProperty Name="C29DailiSalary" ColumnName="29DailiSalary" />
+          <ScalarProperty Name="C30" ColumnName="30" />
+          <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
+          <ScalarProperty Name="C31" ColumnName="31" />
+          <ScalarProperty Name="C31DailiSalary" ColumnName="31DailiSalary" />
+          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="December_2023">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.December_2023">
+        <MappingFragment StoreEntitySet="December_2023">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="C1" ColumnName="1" />
+          <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
+          <ScalarProperty Name="C2" ColumnName="2" />
+          <ScalarProperty Name="C2DailiSalary" ColumnName="2DailiSalary" />
+          <ScalarProperty Name="C3" ColumnName="3" />
+          <ScalarProperty Name="C3DailiSalary" ColumnName="3DailiSalary" />
+          <ScalarProperty Name="C4" ColumnName="4" />
+          <ScalarProperty Name="C4DailiSalary" ColumnName="4DailiSalary" />
+          <ScalarProperty Name="C5" ColumnName="5" />
+          <ScalarProperty Name="C5DailiSalary" ColumnName="5DailiSalary" />
+          <ScalarProperty Name="C6" ColumnName="6" />
+          <ScalarProperty Name="C6DailiSalary" ColumnName="6DailiSalary" />
+          <ScalarProperty Name="C7" ColumnName="7" />
+          <ScalarProperty Name="C7DailiSalary" ColumnName="7DailiSalary" />
+          <ScalarProperty Name="C8" ColumnName="8" />
+          <ScalarProperty Name="C8DailiSalary" ColumnName="8DailiSalary" />
+          <ScalarProperty Name="C9" ColumnName="9" />
+          <ScalarProperty Name="C9DailiSalary" ColumnName="9DailiSalary" />
+          <ScalarProperty Name="C10" ColumnName="10" />
+          <ScalarProperty Name="C10DailiSalary" ColumnName="10DailiSalary" />
+          <ScalarProperty Name="C11" ColumnName="11" />
+          <ScalarProperty Name="C11DailiSalary" ColumnName="11DailiSalary" />
+          <ScalarProperty Name="C12" ColumnName="12" />
+          <ScalarProperty Name="C12DailiSalary" ColumnName="12DailiSalary" />
+          <ScalarProperty Name="C13" ColumnName="13" />
+          <ScalarProperty Name="C13DailiSalary" ColumnName="13DailiSalary" />
+          <ScalarProperty Name="C14" ColumnName="14" />
+          <ScalarProperty Name="C14DailiSalary" ColumnName="14DailiSalary" />
+          <ScalarProperty Name="C15" ColumnName="15" />
+          <ScalarProperty Name="C15DailiSalary" ColumnName="15DailiSalary" />
+          <ScalarProperty Name="C16" ColumnName="16" />
+          <ScalarProperty Name="C16DailiSalary" ColumnName="16DailiSalary" />
+          <ScalarProperty Name="C17" ColumnName="17" />
+          <ScalarProperty Name="C17DailiSalary" ColumnName="17DailiSalary" />
+          <ScalarProperty Name="C18" ColumnName="18" />
+          <ScalarProperty Name="C18DailiSalary" ColumnName="18DailiSalary" />
+          <ScalarProperty Name="C19" ColumnName="19" />
+          <ScalarProperty Name="C19DailiSalary" ColumnName="19DailiSalary" />
+          <ScalarProperty Name="C20" ColumnName="20" />
+          <ScalarProperty Name="C20DailiSalary" ColumnName="20DailiSalary" />
+          <ScalarProperty Name="C21" ColumnName="21" />
+          <ScalarProperty Name="C21DailiSalary" ColumnName="21DailiSalary" />
+          <ScalarProperty Name="C22" ColumnName="22" />
+          <ScalarProperty Name="C22DailiSalary" ColumnName="22DailiSalary" />
+          <ScalarProperty Name="C23" ColumnName="23" />
+          <ScalarProperty Name="C23DailiSalary" ColumnName="23DailiSalary" />
+          <ScalarProperty Name="C24" ColumnName="24" />
+          <ScalarProperty Name="C24DailiSalary" ColumnName="24DailiSalary" />
+          <ScalarProperty Name="C25" ColumnName="25" />
+          <ScalarProperty Name="C25DailiSalary" ColumnName="25DailiSalary" />
+          <ScalarProperty Name="C26" ColumnName="26" />
+          <ScalarProperty Name="C26DailiSalary" ColumnName="26DailiSalary" />
+          <ScalarProperty Name="C27" ColumnName="27" />
+          <ScalarProperty Name="C27DailiSalary" ColumnName="27DailiSalary" />
+          <ScalarProperty Name="C28" ColumnName="28" />
+          <ScalarProperty Name="C28DailiSalary" ColumnName="28DailiSalary" />
+          <ScalarProperty Name="C29" ColumnName="29" />
+          <ScalarProperty Name="C29DailiSalary" ColumnName="29DailiSalary" />
+          <ScalarProperty Name="C30" ColumnName="30" />
+          <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
+          <ScalarProperty Name="C31" ColumnName="31" />
+          <ScalarProperty Name="C31DailiSalary" ColumnName="31DailiSalary" />
+          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="February_2023">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.February_2023">
+        <MappingFragment StoreEntitySet="February_2023">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="C1" ColumnName="1" />
+          <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
+          <ScalarProperty Name="C2" ColumnName="2" />
+          <ScalarProperty Name="C2DailiSalary" ColumnName="2DailiSalary" />
+          <ScalarProperty Name="C3" ColumnName="3" />
+          <ScalarProperty Name="C3DailiSalary" ColumnName="3DailiSalary" />
+          <ScalarProperty Name="C4" ColumnName="4" />
+          <ScalarProperty Name="C4DailiSalary" ColumnName="4DailiSalary" />
+          <ScalarProperty Name="C5" ColumnName="5" />
+          <ScalarProperty Name="C5DailiSalary" ColumnName="5DailiSalary" />
+          <ScalarProperty Name="C6" ColumnName="6" />
+          <ScalarProperty Name="C6DailiSalary" ColumnName="6DailiSalary" />
+          <ScalarProperty Name="C7" ColumnName="7" />
+          <ScalarProperty Name="C7DailiSalary" ColumnName="7DailiSalary" />
+          <ScalarProperty Name="C8" ColumnName="8" />
+          <ScalarProperty Name="C8DailiSalary" ColumnName="8DailiSalary" />
+          <ScalarProperty Name="C9" ColumnName="9" />
+          <ScalarProperty Name="C9DailiSalary" ColumnName="9DailiSalary" />
+          <ScalarProperty Name="C10" ColumnName="10" />
+          <ScalarProperty Name="C10DailiSalary" ColumnName="10DailiSalary" />
+          <ScalarProperty Name="C11" ColumnName="11" />
+          <ScalarProperty Name="C11DailiSalary" ColumnName="11DailiSalary" />
+          <ScalarProperty Name="C12" ColumnName="12" />
+          <ScalarProperty Name="C12DailiSalary" ColumnName="12DailiSalary" />
+          <ScalarProperty Name="C13" ColumnName="13" />
+          <ScalarProperty Name="C13DailiSalary" ColumnName="13DailiSalary" />
+          <ScalarProperty Name="C14" ColumnName="14" />
+          <ScalarProperty Name="C14DailiSalary" ColumnName="14DailiSalary" />
+          <ScalarProperty Name="C15" ColumnName="15" />
+          <ScalarProperty Name="C15DailiSalary" ColumnName="15DailiSalary" />
+          <ScalarProperty Name="C16" ColumnName="16" />
+          <ScalarProperty Name="C16DailiSalary" ColumnName="16DailiSalary" />
+          <ScalarProperty Name="C17" ColumnName="17" />
+          <ScalarProperty Name="C17DailiSalary" ColumnName="17DailiSalary" />
+          <ScalarProperty Name="C18" ColumnName="18" />
+          <ScalarProperty Name="C18DailiSalary" ColumnName="18DailiSalary" />
+          <ScalarProperty Name="C19" ColumnName="19" />
+          <ScalarProperty Name="C19DailiSalary" ColumnName="19DailiSalary" />
+          <ScalarProperty Name="C20" ColumnName="20" />
+          <ScalarProperty Name="C20DailiSalary" ColumnName="20DailiSalary" />
+          <ScalarProperty Name="C21" ColumnName="21" />
+          <ScalarProperty Name="C21DailiSalary" ColumnName="21DailiSalary" />
+          <ScalarProperty Name="C22" ColumnName="22" />
+          <ScalarProperty Name="C22DailiSalary" ColumnName="22DailiSalary" />
+          <ScalarProperty Name="C23" ColumnName="23" />
+          <ScalarProperty Name="C23DailiSalary" ColumnName="23DailiSalary" />
+          <ScalarProperty Name="C24" ColumnName="24" />
+          <ScalarProperty Name="C24DailiSalary" ColumnName="24DailiSalary" />
+          <ScalarProperty Name="C25" ColumnName="25" />
+          <ScalarProperty Name="C25DailiSalary" ColumnName="25DailiSalary" />
+          <ScalarProperty Name="C26" ColumnName="26" />
+          <ScalarProperty Name="C26DailiSalary" ColumnName="26DailiSalary" />
+          <ScalarProperty Name="C27" ColumnName="27" />
+          <ScalarProperty Name="C27DailiSalary" ColumnName="27DailiSalary" />
+          <ScalarProperty Name="C28" ColumnName="28" />
+          <ScalarProperty Name="C28DailiSalary" ColumnName="28DailiSalary" />
+          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="January_2023">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.January_2023">
+        <MappingFragment StoreEntitySet="January_2023">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="C1" ColumnName="1" />
+          <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
+          <ScalarProperty Name="C2" ColumnName="2" />
+          <ScalarProperty Name="C2DailiSalary" ColumnName="2DailiSalary" />
+          <ScalarProperty Name="C3" ColumnName="3" />
+          <ScalarProperty Name="C3DailiSalary" ColumnName="3DailiSalary" />
+          <ScalarProperty Name="C4" ColumnName="4" />
+          <ScalarProperty Name="C4DailiSalary" ColumnName="4DailiSalary" />
+          <ScalarProperty Name="C5" ColumnName="5" />
+          <ScalarProperty Name="C5DailiSalary" ColumnName="5DailiSalary" />
+          <ScalarProperty Name="C6" ColumnName="6" />
+          <ScalarProperty Name="C6DailiSalary" ColumnName="6DailiSalary" />
+          <ScalarProperty Name="C7" ColumnName="7" />
+          <ScalarProperty Name="C7DailiSalary" ColumnName="7DailiSalary" />
+          <ScalarProperty Name="C8" ColumnName="8" />
+          <ScalarProperty Name="C8DailiSalary" ColumnName="8DailiSalary" />
+          <ScalarProperty Name="C9" ColumnName="9" />
+          <ScalarProperty Name="C9DailiSalary" ColumnName="9DailiSalary" />
+          <ScalarProperty Name="C10" ColumnName="10" />
+          <ScalarProperty Name="C10DailiSalary" ColumnName="10DailiSalary" />
+          <ScalarProperty Name="C11" ColumnName="11" />
+          <ScalarProperty Name="C11DailiSalary" ColumnName="11DailiSalary" />
+          <ScalarProperty Name="C12" ColumnName="12" />
+          <ScalarProperty Name="C12DailiSalary" ColumnName="12DailiSalary" />
+          <ScalarProperty Name="C13" ColumnName="13" />
+          <ScalarProperty Name="C13DailiSalary" ColumnName="13DailiSalary" />
+          <ScalarProperty Name="C14" ColumnName="14" />
+          <ScalarProperty Name="C14DailiSalary" ColumnName="14DailiSalary" />
+          <ScalarProperty Name="C15" ColumnName="15" />
+          <ScalarProperty Name="C15DailiSalary" ColumnName="15DailiSalary" />
+          <ScalarProperty Name="C16" ColumnName="16" />
+          <ScalarProperty Name="C16DailiSalary" ColumnName="16DailiSalary" />
+          <ScalarProperty Name="C17" ColumnName="17" />
+          <ScalarProperty Name="C17DailiSalary" ColumnName="17DailiSalary" />
+          <ScalarProperty Name="C18" ColumnName="18" />
+          <ScalarProperty Name="C18DailiSalary" ColumnName="18DailiSalary" />
+          <ScalarProperty Name="C19" ColumnName="19" />
+          <ScalarProperty Name="C19DailiSalary" ColumnName="19DailiSalary" />
+          <ScalarProperty Name="C20" ColumnName="20" />
+          <ScalarProperty Name="C20DailiSalary" ColumnName="20DailiSalary" />
+          <ScalarProperty Name="C21" ColumnName="21" />
+          <ScalarProperty Name="C21DailiSalary" ColumnName="21DailiSalary" />
+          <ScalarProperty Name="C22" ColumnName="22" />
+          <ScalarProperty Name="C22DailiSalary" ColumnName="22DailiSalary" />
+          <ScalarProperty Name="C23" ColumnName="23" />
+          <ScalarProperty Name="C23DailiSalary" ColumnName="23DailiSalary" />
+          <ScalarProperty Name="C24" ColumnName="24" />
+          <ScalarProperty Name="C24DailiSalary" ColumnName="24DailiSalary" />
+          <ScalarProperty Name="C25" ColumnName="25" />
+          <ScalarProperty Name="C25DailiSalary" ColumnName="25DailiSalary" />
+          <ScalarProperty Name="C26" ColumnName="26" />
+          <ScalarProperty Name="C26DailiSalary" ColumnName="26DailiSalary" />
+          <ScalarProperty Name="C27" ColumnName="27" />
+          <ScalarProperty Name="C27DailiSalary" ColumnName="27DailiSalary" />
+          <ScalarProperty Name="C28" ColumnName="28" />
+          <ScalarProperty Name="C28DailiSalary" ColumnName="28DailiSalary" />
+          <ScalarProperty Name="C29" ColumnName="29" />
+          <ScalarProperty Name="C29DailiSalary" ColumnName="29DailiSalary" />
+          <ScalarProperty Name="C30" ColumnName="30" />
+          <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
+          <ScalarProperty Name="C31" ColumnName="31" />
+          <ScalarProperty Name="C31DailiSalary" ColumnName="31DailiSalary" />
+          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="July_2023">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.July_2023">
+        <MappingFragment StoreEntitySet="July_2023">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="C1" ColumnName="1" />
+          <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
+          <ScalarProperty Name="C2" ColumnName="2" />
+          <ScalarProperty Name="C2DailiSalary" ColumnName="2DailiSalary" />
+          <ScalarProperty Name="C3" ColumnName="3" />
+          <ScalarProperty Name="C3DailiSalary" ColumnName="3DailiSalary" />
+          <ScalarProperty Name="C4" ColumnName="4" />
+          <ScalarProperty Name="C4DailiSalary" ColumnName="4DailiSalary" />
+          <ScalarProperty Name="C5" ColumnName="5" />
+          <ScalarProperty Name="C5DailiSalary" ColumnName="5DailiSalary" />
+          <ScalarProperty Name="C6" ColumnName="6" />
+          <ScalarProperty Name="C6DailiSalary" ColumnName="6DailiSalary" />
+          <ScalarProperty Name="C7" ColumnName="7" />
+          <ScalarProperty Name="C7DailiSalary" ColumnName="7DailiSalary" />
+          <ScalarProperty Name="C8" ColumnName="8" />
+          <ScalarProperty Name="C8DailiSalary" ColumnName="8DailiSalary" />
+          <ScalarProperty Name="C9" ColumnName="9" />
+          <ScalarProperty Name="C9DailiSalary" ColumnName="9DailiSalary" />
+          <ScalarProperty Name="C10" ColumnName="10" />
+          <ScalarProperty Name="C10DailiSalary" ColumnName="10DailiSalary" />
+          <ScalarProperty Name="C11" ColumnName="11" />
+          <ScalarProperty Name="C11DailiSalary" ColumnName="11DailiSalary" />
+          <ScalarProperty Name="C12" ColumnName="12" />
+          <ScalarProperty Name="C12DailiSalary" ColumnName="12DailiSalary" />
+          <ScalarProperty Name="C13" ColumnName="13" />
+          <ScalarProperty Name="C13DailiSalary" ColumnName="13DailiSalary" />
+          <ScalarProperty Name="C14" ColumnName="14" />
+          <ScalarProperty Name="C14DailiSalary" ColumnName="14DailiSalary" />
+          <ScalarProperty Name="C15" ColumnName="15" />
+          <ScalarProperty Name="C15DailiSalary" ColumnName="15DailiSalary" />
+          <ScalarProperty Name="C16" ColumnName="16" />
+          <ScalarProperty Name="C16DailiSalary" ColumnName="16DailiSalary" />
+          <ScalarProperty Name="C17" ColumnName="17" />
+          <ScalarProperty Name="C17DailiSalary" ColumnName="17DailiSalary" />
+          <ScalarProperty Name="C18" ColumnName="18" />
+          <ScalarProperty Name="C18DailiSalary" ColumnName="18DailiSalary" />
+          <ScalarProperty Name="C19" ColumnName="19" />
+          <ScalarProperty Name="C19DailiSalary" ColumnName="19DailiSalary" />
+          <ScalarProperty Name="C20" ColumnName="20" />
+          <ScalarProperty Name="C20DailiSalary" ColumnName="20DailiSalary" />
+          <ScalarProperty Name="C21" ColumnName="21" />
+          <ScalarProperty Name="C21DailiSalary" ColumnName="21DailiSalary" />
+          <ScalarProperty Name="C22" ColumnName="22" />
+          <ScalarProperty Name="C22DailiSalary" ColumnName="22DailiSalary" />
+          <ScalarProperty Name="C23" ColumnName="23" />
+          <ScalarProperty Name="C23DailiSalary" ColumnName="23DailiSalary" />
+          <ScalarProperty Name="C24" ColumnName="24" />
+          <ScalarProperty Name="C24DailiSalary" ColumnName="24DailiSalary" />
+          <ScalarProperty Name="C25" ColumnName="25" />
+          <ScalarProperty Name="C25DailiSalary" ColumnName="25DailiSalary" />
+          <ScalarProperty Name="C26" ColumnName="26" />
+          <ScalarProperty Name="C26DailiSalary" ColumnName="26DailiSalary" />
+          <ScalarProperty Name="C27" ColumnName="27" />
+          <ScalarProperty Name="C27DailiSalary" ColumnName="27DailiSalary" />
+          <ScalarProperty Name="C28" ColumnName="28" />
+          <ScalarProperty Name="C28DailiSalary" ColumnName="28DailiSalary" />
+          <ScalarProperty Name="C29" ColumnName="29" />
+          <ScalarProperty Name="C29DailiSalary" ColumnName="29DailiSalary" />
+          <ScalarProperty Name="C30" ColumnName="30" />
+          <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
+          <ScalarProperty Name="C31" ColumnName="31" />
+          <ScalarProperty Name="C31DailiSalary" ColumnName="31DailiSalary" />
+          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="June_2023">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.June_2023">
+        <MappingFragment StoreEntitySet="June_2023">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="C1" ColumnName="1" />
+          <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
+          <ScalarProperty Name="C2" ColumnName="2" />
+          <ScalarProperty Name="C2DailiSalary" ColumnName="2DailiSalary" />
+          <ScalarProperty Name="C3" ColumnName="3" />
+          <ScalarProperty Name="C3DailiSalary" ColumnName="3DailiSalary" />
+          <ScalarProperty Name="C4" ColumnName="4" />
+          <ScalarProperty Name="C4DailiSalary" ColumnName="4DailiSalary" />
+          <ScalarProperty Name="C5" ColumnName="5" />
+          <ScalarProperty Name="C5DailiSalary" ColumnName="5DailiSalary" />
+          <ScalarProperty Name="C6" ColumnName="6" />
+          <ScalarProperty Name="C6DailiSalary" ColumnName="6DailiSalary" />
+          <ScalarProperty Name="C7" ColumnName="7" />
+          <ScalarProperty Name="C7DailiSalary" ColumnName="7DailiSalary" />
+          <ScalarProperty Name="C8" ColumnName="8" />
+          <ScalarProperty Name="C8DailiSalary" ColumnName="8DailiSalary" />
+          <ScalarProperty Name="C9" ColumnName="9" />
+          <ScalarProperty Name="C9DailiSalary" ColumnName="9DailiSalary" />
+          <ScalarProperty Name="C10" ColumnName="10" />
+          <ScalarProperty Name="C10DailiSalary" ColumnName="10DailiSalary" />
+          <ScalarProperty Name="C11" ColumnName="11" />
+          <ScalarProperty Name="C11DailiSalary" ColumnName="11DailiSalary" />
+          <ScalarProperty Name="C12" ColumnName="12" />
+          <ScalarProperty Name="C12DailiSalary" ColumnName="12DailiSalary" />
+          <ScalarProperty Name="C13" ColumnName="13" />
+          <ScalarProperty Name="C13DailiSalary" ColumnName="13DailiSalary" />
+          <ScalarProperty Name="C14" ColumnName="14" />
+          <ScalarProperty Name="C14DailiSalary" ColumnName="14DailiSalary" />
+          <ScalarProperty Name="C15" ColumnName="15" />
+          <ScalarProperty Name="C15DailiSalary" ColumnName="15DailiSalary" />
+          <ScalarProperty Name="C16" ColumnName="16" />
+          <ScalarProperty Name="C16DailiSalary" ColumnName="16DailiSalary" />
+          <ScalarProperty Name="C17" ColumnName="17" />
+          <ScalarProperty Name="C17DailiSalary" ColumnName="17DailiSalary" />
+          <ScalarProperty Name="C18" ColumnName="18" />
+          <ScalarProperty Name="C18DailiSalary" ColumnName="18DailiSalary" />
+          <ScalarProperty Name="C19" ColumnName="19" />
+          <ScalarProperty Name="C19DailiSalary" ColumnName="19DailiSalary" />
+          <ScalarProperty Name="C20" ColumnName="20" />
+          <ScalarProperty Name="C20DailiSalary" ColumnName="20DailiSalary" />
+          <ScalarProperty Name="C21" ColumnName="21" />
+          <ScalarProperty Name="C21DailiSalary" ColumnName="21DailiSalary" />
+          <ScalarProperty Name="C22" ColumnName="22" />
+          <ScalarProperty Name="C22DailiSalary" ColumnName="22DailiSalary" />
+          <ScalarProperty Name="C23" ColumnName="23" />
+          <ScalarProperty Name="C23DailiSalary" ColumnName="23DailiSalary" />
+          <ScalarProperty Name="C24" ColumnName="24" />
+          <ScalarProperty Name="C24DailiSalary" ColumnName="24DailiSalary" />
+          <ScalarProperty Name="C25" ColumnName="25" />
+          <ScalarProperty Name="C25DailiSalary" ColumnName="25DailiSalary" />
+          <ScalarProperty Name="C26" ColumnName="26" />
+          <ScalarProperty Name="C26DailiSalary" ColumnName="26DailiSalary" />
+          <ScalarProperty Name="C27" ColumnName="27" />
+          <ScalarProperty Name="C27DailiSalary" ColumnName="27DailiSalary" />
+          <ScalarProperty Name="C28" ColumnName="28" />
+          <ScalarProperty Name="C28DailiSalary" ColumnName="28DailiSalary" />
+          <ScalarProperty Name="C29" ColumnName="29" />
+          <ScalarProperty Name="C29DailiSalary" ColumnName="29DailiSalary" />
+          <ScalarProperty Name="C30" ColumnName="30" />
+          <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
+          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="March_2023">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.March_2023">
+        <MappingFragment StoreEntitySet="March_2023">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="C1" ColumnName="1" />
+          <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
+          <ScalarProperty Name="C2" ColumnName="2" />
+          <ScalarProperty Name="C2DailiSalary" ColumnName="2DailiSalary" />
+          <ScalarProperty Name="C3" ColumnName="3" />
+          <ScalarProperty Name="C3DailiSalary" ColumnName="3DailiSalary" />
+          <ScalarProperty Name="C4" ColumnName="4" />
+          <ScalarProperty Name="C4DailiSalary" ColumnName="4DailiSalary" />
+          <ScalarProperty Name="C5" ColumnName="5" />
+          <ScalarProperty Name="C5DailiSalary" ColumnName="5DailiSalary" />
+          <ScalarProperty Name="C6" ColumnName="6" />
+          <ScalarProperty Name="C6DailiSalary" ColumnName="6DailiSalary" />
+          <ScalarProperty Name="C7" ColumnName="7" />
+          <ScalarProperty Name="C7DailiSalary" ColumnName="7DailiSalary" />
+          <ScalarProperty Name="C8" ColumnName="8" />
+          <ScalarProperty Name="C8DailiSalary" ColumnName="8DailiSalary" />
+          <ScalarProperty Name="C9" ColumnName="9" />
+          <ScalarProperty Name="C9DailiSalary" ColumnName="9DailiSalary" />
+          <ScalarProperty Name="C10" ColumnName="10" />
+          <ScalarProperty Name="C10DailiSalary" ColumnName="10DailiSalary" />
+          <ScalarProperty Name="C11" ColumnName="11" />
+          <ScalarProperty Name="C11DailiSalary" ColumnName="11DailiSalary" />
+          <ScalarProperty Name="C12" ColumnName="12" />
+          <ScalarProperty Name="C12DailiSalary" ColumnName="12DailiSalary" />
+          <ScalarProperty Name="C13" ColumnName="13" />
+          <ScalarProperty Name="C13DailiSalary" ColumnName="13DailiSalary" />
+          <ScalarProperty Name="C14" ColumnName="14" />
+          <ScalarProperty Name="C14DailiSalary" ColumnName="14DailiSalary" />
+          <ScalarProperty Name="C15" ColumnName="15" />
+          <ScalarProperty Name="C15DailiSalary" ColumnName="15DailiSalary" />
+          <ScalarProperty Name="C16" ColumnName="16" />
+          <ScalarProperty Name="C16DailiSalary" ColumnName="16DailiSalary" />
+          <ScalarProperty Name="C17" ColumnName="17" />
+          <ScalarProperty Name="C17DailiSalary" ColumnName="17DailiSalary" />
+          <ScalarProperty Name="C18" ColumnName="18" />
+          <ScalarProperty Name="C18DailiSalary" ColumnName="18DailiSalary" />
+          <ScalarProperty Name="C19" ColumnName="19" />
+          <ScalarProperty Name="C19DailiSalary" ColumnName="19DailiSalary" />
+          <ScalarProperty Name="C20" ColumnName="20" />
+          <ScalarProperty Name="C20DailiSalary" ColumnName="20DailiSalary" />
+          <ScalarProperty Name="C21" ColumnName="21" />
+          <ScalarProperty Name="C21DailiSalary" ColumnName="21DailiSalary" />
+          <ScalarProperty Name="C22" ColumnName="22" />
+          <ScalarProperty Name="C22DailiSalary" ColumnName="22DailiSalary" />
+          <ScalarProperty Name="C23" ColumnName="23" />
+          <ScalarProperty Name="C23DailiSalary" ColumnName="23DailiSalary" />
+          <ScalarProperty Name="C24" ColumnName="24" />
+          <ScalarProperty Name="C24DailiSalary" ColumnName="24DailiSalary" />
+          <ScalarProperty Name="C25" ColumnName="25" />
+          <ScalarProperty Name="C25DailiSalary" ColumnName="25DailiSalary" />
+          <ScalarProperty Name="C26" ColumnName="26" />
+          <ScalarProperty Name="C26DailiSalary" ColumnName="26DailiSalary" />
+          <ScalarProperty Name="C27" ColumnName="27" />
+          <ScalarProperty Name="C27DailiSalary" ColumnName="27DailiSalary" />
+          <ScalarProperty Name="C28" ColumnName="28" />
+          <ScalarProperty Name="C28DailiSalary" ColumnName="28DailiSalary" />
+          <ScalarProperty Name="C29" ColumnName="29" />
+          <ScalarProperty Name="C29DailiSalary" ColumnName="29DailiSalary" />
+          <ScalarProperty Name="C30" ColumnName="30" />
+          <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
+          <ScalarProperty Name="C31" ColumnName="31" />
+          <ScalarProperty Name="C31DailiSalary" ColumnName="31DailiSalary" />
+          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="May_2023">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.May_2023">
+        <MappingFragment StoreEntitySet="May_2023">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="C1" ColumnName="1" />
+          <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
+          <ScalarProperty Name="C2" ColumnName="2" />
+          <ScalarProperty Name="C2DailiSalary" ColumnName="2DailiSalary" />
+          <ScalarProperty Name="C3" ColumnName="3" />
+          <ScalarProperty Name="C3DailiSalary" ColumnName="3DailiSalary" />
+          <ScalarProperty Name="C4" ColumnName="4" />
+          <ScalarProperty Name="C4DailiSalary" ColumnName="4DailiSalary" />
+          <ScalarProperty Name="C5" ColumnName="5" />
+          <ScalarProperty Name="C5DailiSalary" ColumnName="5DailiSalary" />
+          <ScalarProperty Name="C6" ColumnName="6" />
+          <ScalarProperty Name="C6DailiSalary" ColumnName="6DailiSalary" />
+          <ScalarProperty Name="C7" ColumnName="7" />
+          <ScalarProperty Name="C7DailiSalary" ColumnName="7DailiSalary" />
+          <ScalarProperty Name="C8" ColumnName="8" />
+          <ScalarProperty Name="C8DailiSalary" ColumnName="8DailiSalary" />
+          <ScalarProperty Name="C9" ColumnName="9" />
+          <ScalarProperty Name="C9DailiSalary" ColumnName="9DailiSalary" />
+          <ScalarProperty Name="C10" ColumnName="10" />
+          <ScalarProperty Name="C10DailiSalary" ColumnName="10DailiSalary" />
+          <ScalarProperty Name="C11" ColumnName="11" />
+          <ScalarProperty Name="C11DailiSalary" ColumnName="11DailiSalary" />
+          <ScalarProperty Name="C12" ColumnName="12" />
+          <ScalarProperty Name="C12DailiSalary" ColumnName="12DailiSalary" />
+          <ScalarProperty Name="C13" ColumnName="13" />
+          <ScalarProperty Name="C13DailiSalary" ColumnName="13DailiSalary" />
+          <ScalarProperty Name="C14" ColumnName="14" />
+          <ScalarProperty Name="C14DailiSalary" ColumnName="14DailiSalary" />
+          <ScalarProperty Name="C15" ColumnName="15" />
+          <ScalarProperty Name="C15DailiSalary" ColumnName="15DailiSalary" />
+          <ScalarProperty Name="C16" ColumnName="16" />
+          <ScalarProperty Name="C16DailiSalary" ColumnName="16DailiSalary" />
+          <ScalarProperty Name="C17" ColumnName="17" />
+          <ScalarProperty Name="C17DailiSalary" ColumnName="17DailiSalary" />
+          <ScalarProperty Name="C18" ColumnName="18" />
+          <ScalarProperty Name="C18DailiSalary" ColumnName="18DailiSalary" />
+          <ScalarProperty Name="C19" ColumnName="19" />
+          <ScalarProperty Name="C19DailiSalary" ColumnName="19DailiSalary" />
+          <ScalarProperty Name="C20" ColumnName="20" />
+          <ScalarProperty Name="C20DailiSalary" ColumnName="20DailiSalary" />
+          <ScalarProperty Name="C21" ColumnName="21" />
+          <ScalarProperty Name="C21DailiSalary" ColumnName="21DailiSalary" />
+          <ScalarProperty Name="C22" ColumnName="22" />
+          <ScalarProperty Name="C22DailiSalary" ColumnName="22DailiSalary" />
+          <ScalarProperty Name="C23" ColumnName="23" />
+          <ScalarProperty Name="C23DailiSalary" ColumnName="23DailiSalary" />
+          <ScalarProperty Name="C24" ColumnName="24" />
+          <ScalarProperty Name="C24DailiSalary" ColumnName="24DailiSalary" />
+          <ScalarProperty Name="C25" ColumnName="25" />
+          <ScalarProperty Name="C25DailiSalary" ColumnName="25DailiSalary" />
+          <ScalarProperty Name="C26" ColumnName="26" />
+          <ScalarProperty Name="C26DailiSalary" ColumnName="26DailiSalary" />
+          <ScalarProperty Name="C27" ColumnName="27" />
+          <ScalarProperty Name="C27DailiSalary" ColumnName="27DailiSalary" />
+          <ScalarProperty Name="C28" ColumnName="28" />
+          <ScalarProperty Name="C28DailiSalary" ColumnName="28DailiSalary" />
+          <ScalarProperty Name="C29" ColumnName="29" />
+          <ScalarProperty Name="C29DailiSalary" ColumnName="29DailiSalary" />
+          <ScalarProperty Name="C30" ColumnName="30" />
+          <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
+          <ScalarProperty Name="C31" ColumnName="31" />
+          <ScalarProperty Name="C31DailiSalary" ColumnName="31DailiSalary" />
+          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="November_2023">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.November_2023">
+        <MappingFragment StoreEntitySet="November_2023">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="C1" ColumnName="1" />
+          <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
+          <ScalarProperty Name="C2" ColumnName="2" />
+          <ScalarProperty Name="C2DailiSalary" ColumnName="2DailiSalary" />
+          <ScalarProperty Name="C3" ColumnName="3" />
+          <ScalarProperty Name="C3DailiSalary" ColumnName="3DailiSalary" />
+          <ScalarProperty Name="C4" ColumnName="4" />
+          <ScalarProperty Name="C4DailiSalary" ColumnName="4DailiSalary" />
+          <ScalarProperty Name="C5" ColumnName="5" />
+          <ScalarProperty Name="C5DailiSalary" ColumnName="5DailiSalary" />
+          <ScalarProperty Name="C6" ColumnName="6" />
+          <ScalarProperty Name="C6DailiSalary" ColumnName="6DailiSalary" />
+          <ScalarProperty Name="C7" ColumnName="7" />
+          <ScalarProperty Name="C7DailiSalary" ColumnName="7DailiSalary" />
+          <ScalarProperty Name="C8" ColumnName="8" />
+          <ScalarProperty Name="C8DailiSalary" ColumnName="8DailiSalary" />
+          <ScalarProperty Name="C9" ColumnName="9" />
+          <ScalarProperty Name="C9DailiSalary" ColumnName="9DailiSalary" />
+          <ScalarProperty Name="C10" ColumnName="10" />
+          <ScalarProperty Name="C10DailiSalary" ColumnName="10DailiSalary" />
+          <ScalarProperty Name="C11" ColumnName="11" />
+          <ScalarProperty Name="C11DailiSalary" ColumnName="11DailiSalary" />
+          <ScalarProperty Name="C12" ColumnName="12" />
+          <ScalarProperty Name="C12DailiSalary" ColumnName="12DailiSalary" />
+          <ScalarProperty Name="C13" ColumnName="13" />
+          <ScalarProperty Name="C13DailiSalary" ColumnName="13DailiSalary" />
+          <ScalarProperty Name="C14" ColumnName="14" />
+          <ScalarProperty Name="C14DailiSalary" ColumnName="14DailiSalary" />
+          <ScalarProperty Name="C15" ColumnName="15" />
+          <ScalarProperty Name="C15DailiSalary" ColumnName="15DailiSalary" />
+          <ScalarProperty Name="C16" ColumnName="16" />
+          <ScalarProperty Name="C16DailiSalary" ColumnName="16DailiSalary" />
+          <ScalarProperty Name="C17" ColumnName="17" />
+          <ScalarProperty Name="C17DailiSalary" ColumnName="17DailiSalary" />
+          <ScalarProperty Name="C18" ColumnName="18" />
+          <ScalarProperty Name="C18DailiSalary" ColumnName="18DailiSalary" />
+          <ScalarProperty Name="C19" ColumnName="19" />
+          <ScalarProperty Name="C19DailiSalary" ColumnName="19DailiSalary" />
+          <ScalarProperty Name="C20" ColumnName="20" />
+          <ScalarProperty Name="C20DailiSalary" ColumnName="20DailiSalary" />
+          <ScalarProperty Name="C21" ColumnName="21" />
+          <ScalarProperty Name="C21DailiSalary" ColumnName="21DailiSalary" />
+          <ScalarProperty Name="C22" ColumnName="22" />
+          <ScalarProperty Name="C22DailiSalary" ColumnName="22DailiSalary" />
+          <ScalarProperty Name="C23" ColumnName="23" />
+          <ScalarProperty Name="C23DailiSalary" ColumnName="23DailiSalary" />
+          <ScalarProperty Name="C24" ColumnName="24" />
+          <ScalarProperty Name="C24DailiSalary" ColumnName="24DailiSalary" />
+          <ScalarProperty Name="C25" ColumnName="25" />
+          <ScalarProperty Name="C25DailiSalary" ColumnName="25DailiSalary" />
+          <ScalarProperty Name="C26" ColumnName="26" />
+          <ScalarProperty Name="C26DailiSalary" ColumnName="26DailiSalary" />
+          <ScalarProperty Name="C27" ColumnName="27" />
+          <ScalarProperty Name="C27DailiSalary" ColumnName="27DailiSalary" />
+          <ScalarProperty Name="C28" ColumnName="28" />
+          <ScalarProperty Name="C28DailiSalary" ColumnName="28DailiSalary" />
+          <ScalarProperty Name="C29" ColumnName="29" />
+          <ScalarProperty Name="C29DailiSalary" ColumnName="29DailiSalary" />
+          <ScalarProperty Name="C30" ColumnName="30" />
+          <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
+          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="October_2023">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.October_2023">
+        <MappingFragment StoreEntitySet="October_2023">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="C1" ColumnName="1" />
+          <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
+          <ScalarProperty Name="C2" ColumnName="2" />
+          <ScalarProperty Name="C2DailiSalary" ColumnName="2DailiSalary" />
+          <ScalarProperty Name="C3" ColumnName="3" />
+          <ScalarProperty Name="C3DailiSalary" ColumnName="3DailiSalary" />
+          <ScalarProperty Name="C4" ColumnName="4" />
+          <ScalarProperty Name="C4DailiSalary" ColumnName="4DailiSalary" />
+          <ScalarProperty Name="C5" ColumnName="5" />
+          <ScalarProperty Name="C5DailiSalary" ColumnName="5DailiSalary" />
+          <ScalarProperty Name="C6" ColumnName="6" />
+          <ScalarProperty Name="C6DailiSalary" ColumnName="6DailiSalary" />
+          <ScalarProperty Name="C7" ColumnName="7" />
+          <ScalarProperty Name="C7DailiSalary" ColumnName="7DailiSalary" />
+          <ScalarProperty Name="C8" ColumnName="8" />
+          <ScalarProperty Name="C8DailiSalary" ColumnName="8DailiSalary" />
+          <ScalarProperty Name="C9" ColumnName="9" />
+          <ScalarProperty Name="C9DailiSalary" ColumnName="9DailiSalary" />
+          <ScalarProperty Name="C10" ColumnName="10" />
+          <ScalarProperty Name="C10DailiSalary" ColumnName="10DailiSalary" />
+          <ScalarProperty Name="C11" ColumnName="11" />
+          <ScalarProperty Name="C11DailiSalary" ColumnName="11DailiSalary" />
+          <ScalarProperty Name="C12" ColumnName="12" />
+          <ScalarProperty Name="C12DailiSalary" ColumnName="12DailiSalary" />
+          <ScalarProperty Name="C13" ColumnName="13" />
+          <ScalarProperty Name="C13DailiSalary" ColumnName="13DailiSalary" />
+          <ScalarProperty Name="C14" ColumnName="14" />
+          <ScalarProperty Name="C14DailiSalary" ColumnName="14DailiSalary" />
+          <ScalarProperty Name="C15" ColumnName="15" />
+          <ScalarProperty Name="C15DailiSalary" ColumnName="15DailiSalary" />
+          <ScalarProperty Name="C16" ColumnName="16" />
+          <ScalarProperty Name="C16DailiSalary" ColumnName="16DailiSalary" />
+          <ScalarProperty Name="C17" ColumnName="17" />
+          <ScalarProperty Name="C17DailiSalary" ColumnName="17DailiSalary" />
+          <ScalarProperty Name="C18" ColumnName="18" />
+          <ScalarProperty Name="C18DailiSalary" ColumnName="18DailiSalary" />
+          <ScalarProperty Name="C19" ColumnName="19" />
+          <ScalarProperty Name="C19DailiSalary" ColumnName="19DailiSalary" />
+          <ScalarProperty Name="C20" ColumnName="20" />
+          <ScalarProperty Name="C20DailiSalary" ColumnName="20DailiSalary" />
+          <ScalarProperty Name="C21" ColumnName="21" />
+          <ScalarProperty Name="C21DailiSalary" ColumnName="21DailiSalary" />
+          <ScalarProperty Name="C22" ColumnName="22" />
+          <ScalarProperty Name="C22DailiSalary" ColumnName="22DailiSalary" />
+          <ScalarProperty Name="C23" ColumnName="23" />
+          <ScalarProperty Name="C23DailiSalary" ColumnName="23DailiSalary" />
+          <ScalarProperty Name="C24" ColumnName="24" />
+          <ScalarProperty Name="C24DailiSalary" ColumnName="24DailiSalary" />
+          <ScalarProperty Name="C25" ColumnName="25" />
+          <ScalarProperty Name="C25DailiSalary" ColumnName="25DailiSalary" />
+          <ScalarProperty Name="C26" ColumnName="26" />
+          <ScalarProperty Name="C26DailiSalary" ColumnName="26DailiSalary" />
+          <ScalarProperty Name="C27" ColumnName="27" />
+          <ScalarProperty Name="C27DailiSalary" ColumnName="27DailiSalary" />
+          <ScalarProperty Name="C28" ColumnName="28" />
+          <ScalarProperty Name="C28DailiSalary" ColumnName="28DailiSalary" />
+          <ScalarProperty Name="C29" ColumnName="29" />
+          <ScalarProperty Name="C29DailiSalary" ColumnName="29DailiSalary" />
+          <ScalarProperty Name="C30" ColumnName="30" />
+          <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
+          <ScalarProperty Name="C31" ColumnName="31" />
+          <ScalarProperty Name="C31DailiSalary" ColumnName="31DailiSalary" />
+          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registers">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.Register">
+        <MappingFragment StoreEntitySet="Register">
+          <ScalarProperty Name="Id_user" ColumnName="Id_user" />
+          <ScalarProperty Name="login_user" ColumnName="login_user" />
+          <ScalarProperty Name="pasword_user" ColumnName="pasword_user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="September_2023">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.September_2023">
+        <MappingFragment StoreEntitySet="September_2023">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="C1" ColumnName="1" />
+          <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
+          <ScalarProperty Name="C2" ColumnName="2" />
+          <ScalarProperty Name="C2DailiSalary" ColumnName="2DailiSalary" />
+          <ScalarProperty Name="C3" ColumnName="3" />
+          <ScalarProperty Name="C3DailiSalary" ColumnName="3DailiSalary" />
+          <ScalarProperty Name="C4" ColumnName="4" />
+          <ScalarProperty Name="C4DailiSalary" ColumnName="4DailiSalary" />
+          <ScalarProperty Name="C5" ColumnName="5" />
+          <ScalarProperty Name="C5DailiSalary" ColumnName="5DailiSalary" />
+          <ScalarProperty Name="C6" ColumnName="6" />
+          <ScalarProperty Name="C6DailiSalary" ColumnName="6DailiSalary" />
+          <ScalarProperty Name="C7" ColumnName="7" />
+          <ScalarProperty Name="C7DailiSalary" ColumnName="7DailiSalary" />
+          <ScalarProperty Name="C8" ColumnName="8" />
+          <ScalarProperty Name="C8DailiSalary" ColumnName="8DailiSalary" />
+          <ScalarProperty Name="C9" ColumnName="9" />
+          <ScalarProperty Name="C9DailiSalary" ColumnName="9DailiSalary" />
+          <ScalarProperty Name="C10" ColumnName="10" />
+          <ScalarProperty Name="C10DailiSalary" ColumnName="10DailiSalary" />
+          <ScalarProperty Name="C11" ColumnName="11" />
+          <ScalarProperty Name="C11DailiSalary" ColumnName="11DailiSalary" />
+          <ScalarProperty Name="C12" ColumnName="12" />
+          <ScalarProperty Name="C12DailiSalary" ColumnName="12DailiSalary" />
+          <ScalarProperty Name="C13" ColumnName="13" />
+          <ScalarProperty Name="C13DailiSalary" ColumnName="13DailiSalary" />
+          <ScalarProperty Name="C14" ColumnName="14" />
+          <ScalarProperty Name="C14DailiSalary" ColumnName="14DailiSalary" />
+          <ScalarProperty Name="C15" ColumnName="15" />
+          <ScalarProperty Name="C15DailiSalary" ColumnName="15DailiSalary" />
+          <ScalarProperty Name="C16" ColumnName="16" />
+          <ScalarProperty Name="C16DailiSalary" ColumnName="16DailiSalary" />
+          <ScalarProperty Name="C17" ColumnName="17" />
+          <ScalarProperty Name="C17DailiSalary" ColumnName="17DailiSalary" />
+          <ScalarProperty Name="C18" ColumnName="18" />
+          <ScalarProperty Name="C18DailiSalary" ColumnName="18DailiSalary" />
+          <ScalarProperty Name="C19" ColumnName="19" />
+          <ScalarProperty Name="C19DailiSalary" ColumnName="19DailiSalary" />
+          <ScalarProperty Name="C20" ColumnName="20" />
+          <ScalarProperty Name="C20DailiSalary" ColumnName="20DailiSalary" />
+          <ScalarProperty Name="C21" ColumnName="21" />
+          <ScalarProperty Name="C21DailiSalary" ColumnName="21DailiSalary" />
+          <ScalarProperty Name="C22" ColumnName="22" />
+          <ScalarProperty Name="C22DailiSalary" ColumnName="22DailiSalary" />
+          <ScalarProperty Name="C23" ColumnName="23" />
+          <ScalarProperty Name="C23DailiSalary" ColumnName="23DailiSalary" />
+          <ScalarProperty Name="C24" ColumnName="24" />
+          <ScalarProperty Name="C24DailiSalary" ColumnName="24DailiSalary" />
+          <ScalarProperty Name="C25" ColumnName="25" />
+          <ScalarProperty Name="C25DailiSalary" ColumnName="25DailiSalary" />
+          <ScalarProperty Name="C26" ColumnName="26" />
+          <ScalarProperty Name="C26DailiSalary" ColumnName="26DailiSalary" />
+          <ScalarProperty Name="C27" ColumnName="27" />
+          <ScalarProperty Name="C27DailiSalary" ColumnName="27DailiSalary" />
+          <ScalarProperty Name="C28" ColumnName="28" />
+          <ScalarProperty Name="C28DailiSalary" ColumnName="28DailiSalary" />
+          <ScalarProperty Name="C29" ColumnName="29" />
+          <ScalarProperty Name="C29DailiSalary" ColumnName="29DailiSalary" />
+          <ScalarProperty Name="C30" ColumnName="30" />
+          <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
+          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

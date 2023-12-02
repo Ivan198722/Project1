@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PayrollTrackingApp1
+namespace WindowsFormsApp1
 {
     using System;
     using System.Collections.Generic;

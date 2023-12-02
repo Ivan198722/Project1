@@ -834,8 +834,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PositionName" Type="nvarchar" MaxLength="25" Nullable="false" />
-          <Property Name="HourlySalary($)" Type="decimal" Precision="6" Scale="2" />
+          <Property Name="PositionName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="HourlySalary($)" Type="decimal" Precision="5" Scale="2" />
         </EntityType>
         <!--Ошибки, обнаруженные при создании:
 предупреждение 6002: В таблице или представлении "PayrollTrackingDB.dbo.Register" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
@@ -972,7 +972,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Employee__IdPosi__3A81B327">
+        <Association Name="FK__Employee__IdPosi__347EC10E">
           <End Role="PositionsAndPay" Type="Self.PositionsAndPay" Multiplicity="1" />
           <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1959,7 +1959,7 @@
             <End Role="Employee" EntitySet="Employee" />
             <End Role="December_2023" EntitySet="December_2023" />
           </AssociationSet>
-          <AssociationSet Name="FK__Employee__IdPosi__3A81B327" Association="Self.FK__Employee__IdPosi__3A81B327">
+          <AssociationSet Name="FK__Employee__IdPosi__347EC10E" Association="Self.FK__Employee__IdPosi__347EC10E">
             <End Role="PositionsAndPay" EntitySet="PositionsAndPay" />
             <End Role="Employee" EntitySet="Employee" />
           </AssociationSet>
@@ -2013,33 +2013,31 @@
           <Property Name="LName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Age" Type="Int32" Nullable="false" />
           <Property Name="IdPosition" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="April_2023" Relationship="Self.FK__April_202__IdEmp__2BC97F7C" FromRole="Employee" ToRole="April_2023" />
-          <NavigationProperty Name="August_2023" Relationship="Self.FK__August_20__IdEmp__21D600EE" FromRole="Employee" ToRole="August_2023" />
-          <NavigationProperty Name="December_2023" Relationship="Self.FK__December___IdEmp__15FA39EE" FromRole="Employee" ToRole="December_2023" />
-          <NavigationProperty Name="PositionsAndPay" Relationship="Self.FK__Employee__IdPosi__3A81B327" FromRole="Employee" ToRole="PositionsAndPay" />
-          <NavigationProperty Name="February_2023" Relationship="Self.FK__February___IdEmp__31B762FC" FromRole="Employee" ToRole="February_2023" />
-          <NavigationProperty Name="January_2023" Relationship="Self.FK__January_2__IdEmp__797309D9" FromRole="Employee" ToRole="January_2023" />
-          <NavigationProperty Name="July_2023" Relationship="Self.FK__July_2023__IdEmp__63D8CE75" FromRole="Employee" ToRole="July_2023" />
-          <NavigationProperty Name="June_2023" Relationship="Self.FK__June_2023__IdEmp__25DB9BFC" FromRole="Employee" ToRole="June_2023" />
-          <NavigationProperty Name="March_2023" Relationship="Self.FK__March_202__IdEmp__6FB49575" FromRole="Employee" ToRole="March_2023" />
-          <NavigationProperty Name="May_2023" Relationship="Self.FK__May_2023__IdEmpl__69C6B1F5" FromRole="Employee" ToRole="May_2023" />
-          <NavigationProperty Name="November_2023" Relationship="Self.FK__November___IdEmp__57FD0775" FromRole="Employee" ToRole="November_2023" />
-          <NavigationProperty Name="October_2023" Relationship="Self.FK__October_2__IdEmp__1BE81D6E" FromRole="Employee" ToRole="October_2023" />
-          <NavigationProperty Name="September_2023" Relationship="Self.FK__September__IdEmp__5DEAEAF5" FromRole="Employee" ToRole="September_2023" />
           <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="April_2023" Relationship="Self.FK__April_202__IdEmp__2818EA29" FromRole="Employee" ToRole="April_2023" />
+          <NavigationProperty Name="August_2023" Relationship="Self.FK__August_20__IdEmp__2BE97B0D" FromRole="Employee" ToRole="August_2023" />
+          <NavigationProperty Name="December_2023" Relationship="Self.FK__December___IdEmp__2FBA0BF1" FromRole="Employee" ToRole="December_2023" />
+          <NavigationProperty Name="PositionsAndPay" Relationship="Self.FK__Employee__IdPosi__3A81B327" FromRole="Employee" ToRole="PositionsAndPay" />
+          <NavigationProperty Name="February_2023" Relationship="Self.FK__February___IdEmp__2630A1B7" FromRole="Employee" ToRole="February_2023" />
+          <NavigationProperty Name="January_2023" Relationship="Self.FK__January_2__IdEmp__253C7D7E" FromRole="Employee" ToRole="January_2023" />
+          <NavigationProperty Name="July_2023" Relationship="Self.FK__July_2023__IdEmp__2AF556D4" FromRole="Employee" ToRole="July_2023" />
+          <NavigationProperty Name="June_2023" Relationship="Self.FK__June_2023__IdEmp__2A01329B" FromRole="Employee" ToRole="June_2023" />
+          <NavigationProperty Name="March_2023" Relationship="Self.FK__March_202__IdEmp__2724C5F0" FromRole="Employee" ToRole="March_2023" />
+          <NavigationProperty Name="May_2023" Relationship="Self.FK__May_2023__IdEmpl__290D0E62" FromRole="Employee" ToRole="May_2023" />
+          <NavigationProperty Name="November_2023" Relationship="Self.FK__November___IdEmp__2EC5E7B8" FromRole="Employee" ToRole="November_2023" />
+          <NavigationProperty Name="October_2023" Relationship="Self.FK__October_2__IdEmp__2DD1C37F" FromRole="Employee" ToRole="October_2023" />
+          <NavigationProperty Name="September_2023" Relationship="Self.FK__September__IdEmp__2CDD9F46" FromRole="Employee" ToRole="September_2023" />
         </EntityType>
         <EntityType Name="PositionsAndPay">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PositionHame" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="HourlySalary" Type="Decimal" Precision="6" Scale="2" />
-          <NavigationProperty Name="Employees" Relationship="Self.FK__Employee__IdPosi__3A81B327" FromRole="PositionsAndPay" ToRole="Employee" />
-          <Property Name="HourlySalary___" Type="Decimal" Precision="6" Scale="2" />
-          <Property Name="PositionName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="PositionName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HourlySalary___" Type="Decimal" Precision="5" Scale="2" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__Employee__IdPosi__3A81B327" FromRole="PositionsAndPay" ToRole="Employee" />
         </EntityType>
-        <EntityType Name="SalaryBonus">
+        <EntityType Name="SalaryBonuses">
           <Key>
             <PropertyRef Name="BonusID" />
           </Key>
@@ -2051,12 +2049,11 @@
           <Key>
             <PropertyRef Name="Id" />
             <PropertyRef Name="IdEmployee" />
-            <PropertyRef Name="EmploeeName" />
             <PropertyRef Name="EmployeeName" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdEmployee" Type="Int32" Nullable="false" />
-          <Property Name="EmploeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="C1" Type="Int32" />
           <Property Name="C1DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="C2" Type="Int32" />
@@ -2118,19 +2115,17 @@
           <Property Name="C30" Type="Int32" />
           <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK__April_202__IdEmp__2BC97F7C" FromRole="April_2023" ToRole="Employee" />
-          <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__April_202__IdEmp__2818EA29" FromRole="April_2023" ToRole="Employee" />
         </EntityType>
         <EntityType Name="August_2023">
           <Key>
             <PropertyRef Name="Id" />
             <PropertyRef Name="IdEmployee" />
-            <PropertyRef Name="EmploeeName" />
             <PropertyRef Name="EmployeeName" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdEmployee" Type="Int32" Nullable="false" />
-          <Property Name="EmploeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="C1" Type="Int32" />
           <Property Name="C1DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="C2" Type="Int32" />
@@ -2194,19 +2189,17 @@
           <Property Name="C31" Type="Int32" />
           <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK__August_20__IdEmp__21D600EE" FromRole="August_2023" ToRole="Employee" />
-          <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__August_20__IdEmp__2BE97B0D" FromRole="August_2023" ToRole="Employee" />
         </EntityType>
         <EntityType Name="December_2023">
           <Key>
             <PropertyRef Name="Id" />
             <PropertyRef Name="IdEmployee" />
-            <PropertyRef Name="EmploeeName" />
             <PropertyRef Name="EmployeeName" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdEmployee" Type="Int32" Nullable="false" />
-          <Property Name="EmploeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="C1" Type="Int32" />
           <Property Name="C1DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="C2" Type="Int32" />
@@ -2270,19 +2263,17 @@
           <Property Name="C31" Type="Int32" />
           <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK__December___IdEmp__15FA39EE" FromRole="December_2023" ToRole="Employee" />
-          <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__December___IdEmp__2FBA0BF1" FromRole="December_2023" ToRole="Employee" />
         </EntityType>
         <EntityType Name="February_2023">
           <Key>
             <PropertyRef Name="Id" />
             <PropertyRef Name="IdEmployee" />
-            <PropertyRef Name="EmploeeName" />
             <PropertyRef Name="EmployeeName" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdEmployee" Type="Int32" Nullable="false" />
-          <Property Name="EmploeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="C1" Type="Int32" />
           <Property Name="C1DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="C2" Type="Int32" />
@@ -2340,19 +2331,17 @@
           <Property Name="C28" Type="Int32" />
           <Property Name="C28DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK__February___IdEmp__31B762FC" FromRole="February_2023" ToRole="Employee" />
-          <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__February___IdEmp__2630A1B7" FromRole="February_2023" ToRole="Employee" />
         </EntityType>
         <EntityType Name="January_2023">
           <Key>
             <PropertyRef Name="Id" />
             <PropertyRef Name="IdEmployee" />
-            <PropertyRef Name="EmploeeName" />
             <PropertyRef Name="EmployeeName" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdEmployee" Type="Int32" Nullable="false" />
-          <Property Name="EmploeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="C1" Type="Int32" />
           <Property Name="C1DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="C2" Type="Int32" />
@@ -2416,19 +2405,17 @@
           <Property Name="C31" Type="Int32" />
           <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK__January_2__IdEmp__797309D9" FromRole="January_2023" ToRole="Employee" />
-          <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__January_2__IdEmp__253C7D7E" FromRole="January_2023" ToRole="Employee" />
         </EntityType>
         <EntityType Name="July_2023">
           <Key>
             <PropertyRef Name="Id" />
             <PropertyRef Name="IdEmployee" />
-            <PropertyRef Name="EmploeeName" />
             <PropertyRef Name="EmployeeName" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdEmployee" Type="Int32" Nullable="false" />
-          <Property Name="EmploeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="C1" Type="Int32" />
           <Property Name="C1DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="C2" Type="Int32" />
@@ -2492,19 +2479,17 @@
           <Property Name="C31" Type="Int32" />
           <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK__July_2023__IdEmp__63D8CE75" FromRole="July_2023" ToRole="Employee" />
-          <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__July_2023__IdEmp__2AF556D4" FromRole="July_2023" ToRole="Employee" />
         </EntityType>
         <EntityType Name="June_2023">
           <Key>
             <PropertyRef Name="Id" />
             <PropertyRef Name="IdEmployee" />
-            <PropertyRef Name="EmploeeName" />
             <PropertyRef Name="EmployeeName" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdEmployee" Type="Int32" Nullable="false" />
-          <Property Name="EmploeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="C1" Type="Int32" />
           <Property Name="C1DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="C2" Type="Int32" />
@@ -2566,19 +2551,17 @@
           <Property Name="C30" Type="Int32" />
           <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK__June_2023__IdEmp__25DB9BFC" FromRole="June_2023" ToRole="Employee" />
-          <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__June_2023__IdEmp__2A01329B" FromRole="June_2023" ToRole="Employee" />
         </EntityType>
         <EntityType Name="March_2023">
           <Key>
             <PropertyRef Name="Id" />
             <PropertyRef Name="IdEmployee" />
-            <PropertyRef Name="EmploeeName" />
             <PropertyRef Name="EmployeeName" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdEmployee" Type="Int32" Nullable="false" />
-          <Property Name="EmploeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="C1" Type="Int32" />
           <Property Name="C1DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="C2" Type="Int32" />
@@ -2642,19 +2625,17 @@
           <Property Name="C31" Type="Int32" />
           <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK__March_202__IdEmp__6FB49575" FromRole="March_2023" ToRole="Employee" />
-          <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__March_202__IdEmp__2724C5F0" FromRole="March_2023" ToRole="Employee" />
         </EntityType>
         <EntityType Name="May_2023">
           <Key>
             <PropertyRef Name="Id" />
             <PropertyRef Name="IdEmployee" />
-            <PropertyRef Name="EmploeeName" />
             <PropertyRef Name="EmployeeName" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdEmployee" Type="Int32" Nullable="false" />
-          <Property Name="EmploeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="C1" Type="Int32" />
           <Property Name="C1DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="C2" Type="Int32" />
@@ -2718,19 +2699,17 @@
           <Property Name="C31" Type="Int32" />
           <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK__May_2023__IdEmpl__69C6B1F5" FromRole="May_2023" ToRole="Employee" />
-          <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__May_2023__IdEmpl__290D0E62" FromRole="May_2023" ToRole="Employee" />
         </EntityType>
         <EntityType Name="November_2023">
           <Key>
             <PropertyRef Name="Id" />
             <PropertyRef Name="IdEmployee" />
-            <PropertyRef Name="EmploeeName" />
             <PropertyRef Name="EmployeeName" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdEmployee" Type="Int32" Nullable="false" />
-          <Property Name="EmploeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="C1" Type="Int32" />
           <Property Name="C1DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="C2" Type="Int32" />
@@ -2792,19 +2771,17 @@
           <Property Name="C30" Type="Int32" />
           <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK__November___IdEmp__57FD0775" FromRole="November_2023" ToRole="Employee" />
-          <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__November___IdEmp__2EC5E7B8" FromRole="November_2023" ToRole="Employee" />
         </EntityType>
         <EntityType Name="October_2023">
           <Key>
             <PropertyRef Name="Id" />
             <PropertyRef Name="IdEmployee" />
-            <PropertyRef Name="EmploeeName" />
             <PropertyRef Name="EmployeeName" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdEmployee" Type="Int32" Nullable="false" />
-          <Property Name="EmploeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="C1" Type="Int32" />
           <Property Name="C1DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="C2" Type="Int32" />
@@ -2868,8 +2845,7 @@
           <Property Name="C31" Type="Int32" />
           <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK__October_2__IdEmp__1BE81D6E" FromRole="October_2023" ToRole="Employee" />
-          <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__October_2__IdEmp__2DD1C37F" FromRole="October_2023" ToRole="Employee" />
         </EntityType>
         <EntityType Name="Register">
           <Key>
@@ -2885,12 +2861,11 @@
           <Key>
             <PropertyRef Name="Id" />
             <PropertyRef Name="IdEmployee" />
-            <PropertyRef Name="EmploeeName" />
             <PropertyRef Name="EmployeeName" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdEmployee" Type="Int32" Nullable="false" />
-          <Property Name="EmploeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="C1" Type="Int32" />
           <Property Name="C1DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="C2" Type="Int32" />
@@ -2952,11 +2927,12 @@
           <Property Name="C30" Type="Int32" />
           <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
           <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="Employee" Relationship="Self.FK__September__IdEmp__5DEAEAF5" FromRole="September_2023" ToRole="Employee" />
-          <Property Name="EmployeeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__September__IdEmp__2CDD9F46" FromRole="September_2023" ToRole="Employee" />
         </EntityType>
-        <Association Name="FK__April_202__IdEmp__2BC97F7C">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+        <Association Name="FK__April_202__IdEmp__2818EA29">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="April_2023" Type="Self.April_2023" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
@@ -2967,8 +2943,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__August_20__IdEmp__21D600EE">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+        <Association Name="FK__August_20__IdEmp__2BE97B0D">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="August_2023" Type="Self.August_2023" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
@@ -2979,8 +2957,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__December___IdEmp__15FA39EE">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+        <Association Name="FK__December___IdEmp__2FBA0BF1">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="December_2023" Type="Self.December_2023" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
@@ -3003,8 +2983,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__February___IdEmp__31B762FC">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+        <Association Name="FK__February___IdEmp__2630A1B7">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="February_2023" Type="Self.February_2023" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
@@ -3015,8 +2997,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__January_2__IdEmp__797309D9">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+        <Association Name="FK__January_2__IdEmp__253C7D7E">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="January_2023" Type="Self.January_2023" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
@@ -3027,8 +3011,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__July_2023__IdEmp__63D8CE75">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+        <Association Name="FK__July_2023__IdEmp__2AF556D4">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="July_2023" Type="Self.July_2023" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
@@ -3039,8 +3025,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__June_2023__IdEmp__25DB9BFC">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+        <Association Name="FK__June_2023__IdEmp__2A01329B">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="June_2023" Type="Self.June_2023" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
@@ -3051,8 +3039,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__March_202__IdEmp__6FB49575">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+        <Association Name="FK__March_202__IdEmp__2724C5F0">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="March_2023" Type="Self.March_2023" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
@@ -3063,8 +3053,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__May_2023__IdEmpl__69C6B1F5">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+        <Association Name="FK__May_2023__IdEmpl__290D0E62">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="May_2023" Type="Self.May_2023" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
@@ -3075,8 +3067,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__November___IdEmp__57FD0775">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+        <Association Name="FK__November___IdEmp__2EC5E7B8">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="November_2023" Type="Self.November_2023" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
@@ -3087,8 +3081,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__October_2__IdEmp__1BE81D6E">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+        <Association Name="FK__October_2__IdEmp__2DD1C37F">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="October_2023" Type="Self.October_2023" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
@@ -3099,8 +3095,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__September__IdEmp__5DEAEAF5">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+        <Association Name="FK__September__IdEmp__2CDD9F46">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="September_2023" Type="Self.September_2023" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
@@ -3111,10 +3109,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="PayrollTrackingDBEntities1" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Employees" EntityType="Self.Employee" />
-          <EntitySet Name="PositionsAndPays" EntityType="Self.PositionsAndPay" />
-          <EntitySet Name="SalaryBonuses" EntityType="Self.SalaryBonus" />
+        <EntityContainer Name="PayrollTrackingDBEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Employee" EntityType="Self.Employee" />
+          <EntitySet Name="PositionsAndPay" EntityType="Self.PositionsAndPay" />
+          <EntitySet Name="SalaryBonuses" EntityType="Self.SalaryBonuses" />
           <EntitySet Name="April_2023" EntityType="Self.April_2023" />
           <EntitySet Name="August_2023" EntityType="Self.August_2023" />
           <EntitySet Name="December_2023" EntityType="Self.December_2023" />
@@ -3126,58 +3124,58 @@
           <EntitySet Name="May_2023" EntityType="Self.May_2023" />
           <EntitySet Name="November_2023" EntityType="Self.November_2023" />
           <EntitySet Name="October_2023" EntityType="Self.October_2023" />
-          <EntitySet Name="Registers" EntityType="Self.Register" />
+          <EntitySet Name="Register" EntityType="Self.Register" />
           <EntitySet Name="September_2023" EntityType="Self.September_2023" />
-          <AssociationSet Name="FK__April_202__IdEmp__2BC97F7C" Association="Self.FK__April_202__IdEmp__2BC97F7C">
-            <End Role="Employee" EntitySet="Employees" />
+          <AssociationSet Name="FK__April_202__IdEmp__2818EA29" Association="Self.FK__April_202__IdEmp__2818EA29">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="April_2023" EntitySet="April_2023" />
           </AssociationSet>
-          <AssociationSet Name="FK__August_20__IdEmp__21D600EE" Association="Self.FK__August_20__IdEmp__21D600EE">
-            <End Role="Employee" EntitySet="Employees" />
+          <AssociationSet Name="FK__August_20__IdEmp__2BE97B0D" Association="Self.FK__August_20__IdEmp__2BE97B0D">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="August_2023" EntitySet="August_2023" />
           </AssociationSet>
-          <AssociationSet Name="FK__December___IdEmp__15FA39EE" Association="Self.FK__December___IdEmp__15FA39EE">
-            <End Role="Employee" EntitySet="Employees" />
+          <AssociationSet Name="FK__December___IdEmp__2FBA0BF1" Association="Self.FK__December___IdEmp__2FBA0BF1">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="December_2023" EntitySet="December_2023" />
           </AssociationSet>
           <AssociationSet Name="FK__Employee__IdPosi__3A81B327" Association="Self.FK__Employee__IdPosi__3A81B327">
-            <End Role="PositionsAndPay" EntitySet="PositionsAndPays" />
-            <End Role="Employee" EntitySet="Employees" />
+            <End Role="PositionsAndPay" EntitySet="PositionsAndPay" />
+            <End Role="Employee" EntitySet="Employee" />
           </AssociationSet>
-          <AssociationSet Name="FK__February___IdEmp__31B762FC" Association="Self.FK__February___IdEmp__31B762FC">
-            <End Role="Employee" EntitySet="Employees" />
+          <AssociationSet Name="FK__February___IdEmp__2630A1B7" Association="Self.FK__February___IdEmp__2630A1B7">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="February_2023" EntitySet="February_2023" />
           </AssociationSet>
-          <AssociationSet Name="FK__January_2__IdEmp__797309D9" Association="Self.FK__January_2__IdEmp__797309D9">
-            <End Role="Employee" EntitySet="Employees" />
+          <AssociationSet Name="FK__January_2__IdEmp__253C7D7E" Association="Self.FK__January_2__IdEmp__253C7D7E">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="January_2023" EntitySet="January_2023" />
           </AssociationSet>
-          <AssociationSet Name="FK__July_2023__IdEmp__63D8CE75" Association="Self.FK__July_2023__IdEmp__63D8CE75">
-            <End Role="Employee" EntitySet="Employees" />
+          <AssociationSet Name="FK__July_2023__IdEmp__2AF556D4" Association="Self.FK__July_2023__IdEmp__2AF556D4">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="July_2023" EntitySet="July_2023" />
           </AssociationSet>
-          <AssociationSet Name="FK__June_2023__IdEmp__25DB9BFC" Association="Self.FK__June_2023__IdEmp__25DB9BFC">
-            <End Role="Employee" EntitySet="Employees" />
+          <AssociationSet Name="FK__June_2023__IdEmp__2A01329B" Association="Self.FK__June_2023__IdEmp__2A01329B">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="June_2023" EntitySet="June_2023" />
           </AssociationSet>
-          <AssociationSet Name="FK__March_202__IdEmp__6FB49575" Association="Self.FK__March_202__IdEmp__6FB49575">
-            <End Role="Employee" EntitySet="Employees" />
+          <AssociationSet Name="FK__March_202__IdEmp__2724C5F0" Association="Self.FK__March_202__IdEmp__2724C5F0">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="March_2023" EntitySet="March_2023" />
           </AssociationSet>
-          <AssociationSet Name="FK__May_2023__IdEmpl__69C6B1F5" Association="Self.FK__May_2023__IdEmpl__69C6B1F5">
-            <End Role="Employee" EntitySet="Employees" />
+          <AssociationSet Name="FK__May_2023__IdEmpl__290D0E62" Association="Self.FK__May_2023__IdEmpl__290D0E62">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="May_2023" EntitySet="May_2023" />
           </AssociationSet>
-          <AssociationSet Name="FK__November___IdEmp__57FD0775" Association="Self.FK__November___IdEmp__57FD0775">
-            <End Role="Employee" EntitySet="Employees" />
+          <AssociationSet Name="FK__November___IdEmp__2EC5E7B8" Association="Self.FK__November___IdEmp__2EC5E7B8">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="November_2023" EntitySet="November_2023" />
           </AssociationSet>
-          <AssociationSet Name="FK__October_2__IdEmp__1BE81D6E" Association="Self.FK__October_2__IdEmp__1BE81D6E">
-            <End Role="Employee" EntitySet="Employees" />
+          <AssociationSet Name="FK__October_2__IdEmp__2DD1C37F" Association="Self.FK__October_2__IdEmp__2DD1C37F">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="October_2023" EntitySet="October_2023" />
           </AssociationSet>
-          <AssociationSet Name="FK__September__IdEmp__5DEAEAF5" Association="Self.FK__September__IdEmp__5DEAEAF5">
-            <End Role="Employee" EntitySet="Employees" />
+          <AssociationSet Name="FK__September__IdEmp__2CDD9F46" Association="Self.FK__September__IdEmp__2CDD9F46">
+            <End Role="Employee" EntitySet="Employee" />
             <End Role="September_2023" EntitySet="September_2023" />
           </AssociationSet>
         </EntityContainer>
@@ -3186,30 +3184,30 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище PayrollTrackingDBModelContainer" CdmEntityContainer="PayrollTrackingDBEntities1">
-          <EntitySetMapping Name="Employees">
+        <EntityContainerMapping StorageEntityContainer="Хранилище PayrollTrackingDBModelContainer" CdmEntityContainer="PayrollTrackingDBEntities2">
+          <EntitySetMapping Name="Employee">
             <EntityTypeMapping TypeName="PayrollTrackingDBModel.Employee">
               <MappingFragment StoreEntitySet="Employee">
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="FName" ColumnName="FName" />
                 <ScalarProperty Name="LName" ColumnName="LName" />
                 <ScalarProperty Name="Age" ColumnName="Age" />
                 <ScalarProperty Name="IdPosition" ColumnName="IdPosition" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="PositionsAndPays">
+          <EntitySetMapping Name="PositionsAndPay">
             <EntityTypeMapping TypeName="PayrollTrackingDBModel.PositionsAndPay">
               <MappingFragment StoreEntitySet="PositionsAndPay">
+                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="PositionName" ColumnName="PositionName" />
                 <ScalarProperty Name="HourlySalary___" ColumnName="HourlySalary($)" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SalaryBonuses">
-            <EntityTypeMapping TypeName="PayrollTrackingDBModel.SalaryBonus">
+            <EntityTypeMapping TypeName="PayrollTrackingDBModel.SalaryBonuses">
               <MappingFragment StoreEntitySet="SalaryBonuses">
                 <ScalarProperty Name="BonusID" ColumnName="BonusID" />
                 <ScalarProperty Name="BonusName" ColumnName="BonusName" />
@@ -3220,9 +3218,9 @@
           <EntitySetMapping Name="April_2023">
             <EntityTypeMapping TypeName="PayrollTrackingDBModel.April_2023">
               <MappingFragment StoreEntitySet="April_2023">
-                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="C1" ColumnName="1" />
                 <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
                 <ScalarProperty Name="C2" ColumnName="2" />
@@ -3290,9 +3288,9 @@
           <EntitySetMapping Name="August_2023">
             <EntityTypeMapping TypeName="PayrollTrackingDBModel.August_2023">
               <MappingFragment StoreEntitySet="August_2023">
-                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="C1" ColumnName="1" />
                 <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
                 <ScalarProperty Name="C2" ColumnName="2" />
@@ -3362,9 +3360,9 @@
           <EntitySetMapping Name="December_2023">
             <EntityTypeMapping TypeName="PayrollTrackingDBModel.December_2023">
               <MappingFragment StoreEntitySet="December_2023">
-                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="C1" ColumnName="1" />
                 <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
                 <ScalarProperty Name="C2" ColumnName="2" />
@@ -3434,9 +3432,9 @@
           <EntitySetMapping Name="February_2023">
             <EntityTypeMapping TypeName="PayrollTrackingDBModel.February_2023">
               <MappingFragment StoreEntitySet="February_2023">
-                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="C1" ColumnName="1" />
                 <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
                 <ScalarProperty Name="C2" ColumnName="2" />
@@ -3500,9 +3498,9 @@
           <EntitySetMapping Name="January_2023">
             <EntityTypeMapping TypeName="PayrollTrackingDBModel.January_2023">
               <MappingFragment StoreEntitySet="January_2023">
-                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="C1" ColumnName="1" />
                 <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
                 <ScalarProperty Name="C2" ColumnName="2" />
@@ -3572,9 +3570,9 @@
           <EntitySetMapping Name="July_2023">
             <EntityTypeMapping TypeName="PayrollTrackingDBModel.July_2023">
               <MappingFragment StoreEntitySet="July_2023">
-                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="C1" ColumnName="1" />
                 <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
                 <ScalarProperty Name="C2" ColumnName="2" />
@@ -3644,9 +3642,9 @@
           <EntitySetMapping Name="June_2023">
             <EntityTypeMapping TypeName="PayrollTrackingDBModel.June_2023">
               <MappingFragment StoreEntitySet="June_2023">
-                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="C1" ColumnName="1" />
                 <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
                 <ScalarProperty Name="C2" ColumnName="2" />
@@ -3714,9 +3712,9 @@
           <EntitySetMapping Name="March_2023">
             <EntityTypeMapping TypeName="PayrollTrackingDBModel.March_2023">
               <MappingFragment StoreEntitySet="March_2023">
-                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="C1" ColumnName="1" />
                 <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
                 <ScalarProperty Name="C2" ColumnName="2" />
@@ -3786,9 +3784,9 @@
           <EntitySetMapping Name="May_2023">
             <EntityTypeMapping TypeName="PayrollTrackingDBModel.May_2023">
               <MappingFragment StoreEntitySet="May_2023">
-                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="C1" ColumnName="1" />
                 <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
                 <ScalarProperty Name="C2" ColumnName="2" />
@@ -3858,9 +3856,9 @@
           <EntitySetMapping Name="November_2023">
             <EntityTypeMapping TypeName="PayrollTrackingDBModel.November_2023">
               <MappingFragment StoreEntitySet="November_2023">
-                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="C1" ColumnName="1" />
                 <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
                 <ScalarProperty Name="C2" ColumnName="2" />
@@ -3928,9 +3926,9 @@
           <EntitySetMapping Name="October_2023">
             <EntityTypeMapping TypeName="PayrollTrackingDBModel.October_2023">
               <MappingFragment StoreEntitySet="October_2023">
-                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="C1" ColumnName="1" />
                 <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
                 <ScalarProperty Name="C2" ColumnName="2" />
@@ -3997,7 +3995,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Registers">
+          <EntitySetMapping Name="Register">
             <EntityTypeMapping TypeName="PayrollTrackingDBModel.Register">
               <MappingFragment StoreEntitySet="Register">
                 <ScalarProperty Name="Id_user" ColumnName="Id_user" />
@@ -4009,9 +4007,9 @@
           <EntitySetMapping Name="September_2023">
             <EntityTypeMapping TypeName="PayrollTrackingDBModel.September_2023">
               <MappingFragment StoreEntitySet="September_2023">
-                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
                 <ScalarProperty Name="C1" ColumnName="1" />
                 <ScalarProperty Name="C1DailiSalary" ColumnName="1DailiSalary" />
                 <ScalarProperty Name="C2" ColumnName="2" />
@@ -4090,7 +4088,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />

@@ -1,0 +1,9 @@
+C:\MyProject\PayrollTrackingApp1\WindowsFormsApp1\obj\Debug\PayrollTrackingApp1.1.csproj.AssemblyReference.cache
+C:\MyProject\PayrollTrackingApp1\WindowsFormsApp1\obj\Debug\PayrollTrackingApp1.Authorization.resources
+C:\MyProject\PayrollTrackingApp1\WindowsFormsApp1\obj\Debug\PayrollTrackingApp1.Employee_Information.resources
+C:\MyProject\PayrollTrackingApp1\WindowsFormsApp1\obj\Debug\PayrollTrackingApp1.PayrollTrackingApp.resources
+C:\MyProject\PayrollTrackingApp1\WindowsFormsApp1\obj\Debug\PayrollTrackingApp1.Positional_Rates.resources
+C:\MyProject\PayrollTrackingApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\MyProject\PayrollTrackingApp1\WindowsFormsApp1\obj\Debug\PayrollTrackingApp1.Regisration.resources
+C:\MyProject\PayrollTrackingApp1\WindowsFormsApp1\obj\Debug\PayrollTrackingApp1.1.csproj.GenerateResource.cache
+C:\MyProject\PayrollTrackingApp1\WindowsFormsApp1\obj\Debug\PayrollTrackingApp1.1.csproj.CoreCompileInputs.cache

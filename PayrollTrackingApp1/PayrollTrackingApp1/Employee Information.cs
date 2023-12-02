@@ -34,8 +34,6 @@ namespace PayrollTrackingApp1
         private void Add_button_Click(object sender, EventArgs e)
         {
 
-            using (PayrollTrackingDBEntities1 entities1 = new PayrollTrackingDBEntities1())
-            {
 
                 int index = dataGridView1.SelectedRows[0].Index;
 
@@ -95,9 +93,10 @@ namespace PayrollTrackingApp1
                 finally
                 {
                     this.employeeTableAdapter1.Fill(this.payrollTrackingDBDataSet1.Employee);
+                  dB.GetConnection().Close();
                 }
                
-           }
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -107,8 +106,8 @@ namespace PayrollTrackingApp1
 
         private void Edit_button_Click(object sender, EventArgs e)
         {
-            using (PayrollTrackingDBEntities1 entities1 = new PayrollTrackingDBEntities1())
-            {
+           
+            
                 if (dataGridView1.SelectedRows.Count != 1)
                 {
                     MessageBox.Show("Choose one line!", "Attention!");
@@ -173,15 +172,16 @@ namespace PayrollTrackingApp1
                 finally
                 {
                     this.employeeTableAdapter1.Fill(this.payrollTrackingDBDataSet1.Employee);
+                    dB.GetConnection().Close();
                 }
 
-            }
+            
         }
 
         private void Delete_button_Click(object sender, EventArgs e)
         {
-            using (PayrollTrackingDBEntities1 entities1 = new PayrollTrackingDBEntities1())
-            {
+          
+            
                 //Проверим количество выбранных строк
                 if (dataGridView1.SelectedRows.Count != 1)
                 {
@@ -236,8 +236,9 @@ namespace PayrollTrackingApp1
                 {
                     // Закрываем соеденение с БД
                     this.employeeTableAdapter1.Fill(this.payrollTrackingDBDataSet1.Employee);
+                    dB.GetConnection().Close();
                 }
-            }
+            
         }
     }
 }

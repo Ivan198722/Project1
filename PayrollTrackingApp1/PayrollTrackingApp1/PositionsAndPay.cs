@@ -17,16 +17,14 @@ namespace PayrollTrackingApp1
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PositionsAndPay()
         {
-            this.Employees = new HashSet<Employee>();
+            this.Employee = new HashSet<Employee>();
         }
     
         public int Id { get; set; }
-        public string PositionHame { get; set; }
-        public Nullable<decimal> HourlySalary { get; set; }
-        public Nullable<decimal> HourlySalary___ { get; set; }
         public string PositionName { get; set; }
+        public Nullable<decimal> HourlySalary___ { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Employee> Employees { get; set; }
+        public virtual ICollection<Employee> Employee { get; set; }
     }
 }

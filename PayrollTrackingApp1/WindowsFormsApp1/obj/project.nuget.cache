@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "0PsSz7Hy4RQhNyl6bA5O1Uwu3TR/C4ezPX8GwxugQSCGC4nhdWmfBwIIhjgoflGX5FsVfE/bOFpm8IvFZ/jZ8A==",
+  "success": true,
+  "projectFilePath": "C:\\MyProject\\PayrollTrackingApp1\\WindowsFormsApp1\\PayrollTrackingApp1.1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\stadn\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\stadn\\.nuget\\packages\\entityframework.ru\\6.2.0\\entityframework.ru.6.2.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Версия обнаруженного пакета нарушает ограничение зависимости: EntityFramework.ru 6.2.0 требуется EntityFramework (= 6.2.0), но в результате разрешения получена версия EntityFramework 6.4.4.",
+      "libraryId": "EntityFramework",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.8",
+        ".NETFramework,Version=v4.8/win",
+        ".NETFramework,Version=v4.8/win-arm64",
+        ".NETFramework,Version=v4.8/win-x64",
+        ".NETFramework,Version=v4.8/win-x86"
+      ]
+    }
+  ]
+}

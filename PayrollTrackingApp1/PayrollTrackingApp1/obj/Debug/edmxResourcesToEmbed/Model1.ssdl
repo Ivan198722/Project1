@@ -829,8 +829,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="PositionName" Type="nvarchar" MaxLength="25" Nullable="false" />
-    <Property Name="HourlySalary($)" Type="decimal" Precision="6" Scale="2" />
+    <Property Name="PositionName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="HourlySalary($)" Type="decimal" Precision="5" Scale="2" />
   </EntityType>
   <!--Ошибки, обнаруженные при создании:
 предупреждение 6002: В таблице или представлении "PayrollTrackingDB.dbo.Register" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
@@ -967,7 +967,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Employee__IdPosi__3A81B327">
+  <Association Name="FK__Employee__IdPosi__347EC10E">
     <End Role="PositionsAndPay" Type="Self.PositionsAndPay" Multiplicity="1" />
     <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1954,7 +1954,7 @@
       <End Role="Employee" EntitySet="Employee" />
       <End Role="December_2023" EntitySet="December_2023" />
     </AssociationSet>
-    <AssociationSet Name="FK__Employee__IdPosi__3A81B327" Association="Self.FK__Employee__IdPosi__3A81B327">
+    <AssociationSet Name="FK__Employee__IdPosi__347EC10E" Association="Self.FK__Employee__IdPosi__347EC10E">
       <End Role="PositionsAndPay" EntitySet="PositionsAndPay" />
       <End Role="Employee" EntitySet="Employee" />
     </AssociationSet>
