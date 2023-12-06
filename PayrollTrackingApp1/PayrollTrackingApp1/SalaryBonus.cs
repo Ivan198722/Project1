@@ -12,7 +12,7 @@ namespace PayrollTrackingApp1
     using System;
     using System.Collections.Generic;
     
-    public partial class SalaryBonuses
+    public partial class SalaryBonus
     {
         public int BonusID { get; set; }
         public string BonusName { get; set; }

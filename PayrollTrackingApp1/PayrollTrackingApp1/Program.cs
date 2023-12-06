@@ -1,5 +1,8 @@
-﻿using System;
+﻿using PayrollTrackingApp1;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +19,7 @@ namespace PayrollTrackingApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Position_Rates());
+            Application.Run(new PayrollTrackingApp());
         }
     }
 }

@@ -43,5 +43,25 @@ namespace PayrollTrackingApp1
             if (!Application.OpenForms.OfType<Position_Rates>().Any())
                 new Position_Rates ().Show();
         }
+
+        private void bonusSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<Bonus_Settings>().Any())
+                new Bonus_Settings().Show();
+        }
+
+        private void jenuaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (!Application.OpenForms.OfType<January>().Any())
+                new January().Show();
+        }
+
+        private void febrToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (!Application.OpenForms.OfType<February>().Any())
+                new February().Show();
+        }
     }
 }

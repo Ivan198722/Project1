@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PayrollTrackingApp1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,7 +49,7 @@ namespace PayrollTrackingApp1
         }
 
        
-            private void add_button_Click(object sender, EventArgs e)
+        private void add_button_Click(object sender, EventArgs e)
         {
             int index = dataGridView1.SelectedRows[0].Index;
 
@@ -65,8 +66,8 @@ namespace PayrollTrackingApp1
             string id = dataGridView1.Rows[index].Cells[0].Value.ToString();
             string PositionName = dataGridView1.Rows[index].Cells[1].Value.ToString();
             string hourlySalary = dataGridView1.Rows[index].Cells[2].Value.ToString() ;
-            
-            if(hourlySalary==string.Empty)
+            hourlySalary = hourlySalary.Replace(',', '.');
+            if (hourlySalary==string.Empty)
             { hourlySalary="0"; }
             try
             {
@@ -114,16 +115,10 @@ namespace PayrollTrackingApp1
 
             string id = dataGridView1.Rows[rowIndex].Cells[0].Value.ToString();
             string PositionName = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
-
-           //dataGridView1.Columns[2].DefaultCellStyle.Format = "N2";
-          string  hourlySalary = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
+            
+            string  hourlySalary = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
             hourlySalary = hourlySalary.Replace(',', '.');
            
-            // string hourlySalary=  dataGridView1.Rows[rowIndex].Cells[2].ValueType = GetType();
-
-            //string formattedSalary = hourlySalary.ToString("0.##", CultureInfo.InvariantCulture);
-
-
 
             try
             {
@@ -150,3 +145,8 @@ namespace PayrollTrackingApp1
        
     }
 }
+
+
+
+
+    

@@ -13,10 +13,10 @@ namespace PayrollTrackingApp1
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PayrollTrackingDBEntities2 : DbContext
+    public partial class PayrollTrackingDBEntities3 : DbContext
     {
-        public PayrollTrackingDBEntities2()
-            : base("name=PayrollTrackingDBEntities2")
+        public PayrollTrackingDBEntities3()
+            : base("name=PayrollTrackingDBEntities3")
         {
         }
     
@@ -25,9 +25,9 @@ namespace PayrollTrackingApp1
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Employee> Employee { get; set; }
-        public virtual DbSet<PositionsAndPay> PositionsAndPay { get; set; }
-        public virtual DbSet<SalaryBonuses> SalaryBonuses { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<PositionsAndPay> PositionsAndPays { get; set; }
+        public virtual DbSet<SalaryBonus> SalaryBonuses { get; set; }
         public virtual DbSet<April_2023> April_2023 { get; set; }
         public virtual DbSet<August_2023> August_2023 { get; set; }
         public virtual DbSet<December_2023> December_2023 { get; set; }
@@ -39,7 +39,7 @@ namespace PayrollTrackingApp1
         public virtual DbSet<May_2023> May_2023 { get; set; }
         public virtual DbSet<November_2023> November_2023 { get; set; }
         public virtual DbSet<October_2023> October_2023 { get; set; }
-        public virtual DbSet<Register> Register { get; set; }
+        public virtual DbSet<Register> Registers { get; set; }
         public virtual DbSet<September_2023> September_2023 { get; set; }
     }
 }

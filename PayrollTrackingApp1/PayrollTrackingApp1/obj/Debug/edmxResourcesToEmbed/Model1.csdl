@@ -13,9 +13,9 @@
     <NavigationProperty Name="April_2023" Relationship="Self.FK__April_202__IdEmp__2818EA29" FromRole="Employee" ToRole="April_2023" />
     <NavigationProperty Name="August_2023" Relationship="Self.FK__August_20__IdEmp__2BE97B0D" FromRole="Employee" ToRole="August_2023" />
     <NavigationProperty Name="December_2023" Relationship="Self.FK__December___IdEmp__2FBA0BF1" FromRole="Employee" ToRole="December_2023" />
-    <NavigationProperty Name="PositionsAndPay" Relationship="Self.FK__Employee__IdPosi__3A81B327" FromRole="Employee" ToRole="PositionsAndPay" />
+    <NavigationProperty Name="PositionsAndPay" Relationship="Self.FK__Employee__IdPosi__384F51F2" FromRole="Employee" ToRole="PositionsAndPay" />
     <NavigationProperty Name="February_2023" Relationship="Self.FK__February___IdEmp__2630A1B7" FromRole="Employee" ToRole="February_2023" />
-    <NavigationProperty Name="January_2023" Relationship="Self.FK__January_2__IdEmp__253C7D7E" FromRole="Employee" ToRole="January_2023" />
+    <NavigationProperty Name="January_2023" Relationship="Self.FK__January_2__IdEmp__3943762B" FromRole="Employee" ToRole="January_2023" />
     <NavigationProperty Name="July_2023" Relationship="Self.FK__July_2023__IdEmp__2AF556D4" FromRole="Employee" ToRole="July_2023" />
     <NavigationProperty Name="June_2023" Relationship="Self.FK__June_2023__IdEmp__2A01329B" FromRole="Employee" ToRole="June_2023" />
     <NavigationProperty Name="March_2023" Relationship="Self.FK__March_202__IdEmp__2724C5F0" FromRole="Employee" ToRole="March_2023" />
@@ -31,9 +31,9 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="PositionName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="HourlySalary___" Type="Decimal" Precision="5" Scale="2" />
-    <NavigationProperty Name="Employee" Relationship="Self.FK__Employee__IdPosi__3A81B327" FromRole="PositionsAndPay" ToRole="Employee" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK__Employee__IdPosi__384F51F2" FromRole="PositionsAndPay" ToRole="Employee" />
   </EntityType>
-  <EntityType Name="SalaryBonuses">
+  <EntityType Name="SalaryBonus">
     <Key>
       <PropertyRef Name="BonusID" />
     </Key>
@@ -110,7 +110,7 @@
     <Property Name="C29DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="C30" Type="Int32" />
     <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MonthliSalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__April_202__IdEmp__2818EA29" FromRole="April_2023" ToRole="Employee" />
   </EntityType>
   <EntityType Name="August_2023">
@@ -184,7 +184,7 @@
     <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="C31" Type="Int32" />
     <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MonthliSalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__August_20__IdEmp__2BE97B0D" FromRole="August_2023" ToRole="Employee" />
   </EntityType>
   <EntityType Name="December_2023">
@@ -258,7 +258,7 @@
     <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="C31" Type="Int32" />
     <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MonthliSalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__December___IdEmp__2FBA0BF1" FromRole="December_2023" ToRole="Employee" />
   </EntityType>
   <EntityType Name="February_2023">
@@ -326,7 +326,7 @@
     <Property Name="C27DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="C28" Type="Int32" />
     <Property Name="C28DailiSalary" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MonthliSalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__February___IdEmp__2630A1B7" FromRole="February_2023" ToRole="Employee" />
   </EntityType>
   <EntityType Name="January_2023">
@@ -400,8 +400,8 @@
     <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="C31" Type="Int32" />
     <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
-    <NavigationProperty Name="Employee" Relationship="Self.FK__January_2__IdEmp__253C7D7E" FromRole="January_2023" ToRole="Employee" />
+    <Property Name="MonthliSalary" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__January_2__IdEmp__3943762B" FromRole="January_2023" ToRole="Employee" />
   </EntityType>
   <EntityType Name="July_2023">
     <Key>
@@ -474,7 +474,7 @@
     <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="C31" Type="Int32" />
     <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MonthliSalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__July_2023__IdEmp__2AF556D4" FromRole="July_2023" ToRole="Employee" />
   </EntityType>
   <EntityType Name="June_2023">
@@ -546,7 +546,7 @@
     <Property Name="C29DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="C30" Type="Int32" />
     <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MonthliSalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__June_2023__IdEmp__2A01329B" FromRole="June_2023" ToRole="Employee" />
   </EntityType>
   <EntityType Name="March_2023">
@@ -620,7 +620,7 @@
     <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="C31" Type="Int32" />
     <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MonthliSalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__March_202__IdEmp__2724C5F0" FromRole="March_2023" ToRole="Employee" />
   </EntityType>
   <EntityType Name="May_2023">
@@ -694,7 +694,7 @@
     <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="C31" Type="Int32" />
     <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MonthliSalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__May_2023__IdEmpl__290D0E62" FromRole="May_2023" ToRole="Employee" />
   </EntityType>
   <EntityType Name="November_2023">
@@ -766,7 +766,7 @@
     <Property Name="C29DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="C30" Type="Int32" />
     <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MonthliSalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__November___IdEmp__2EC5E7B8" FromRole="November_2023" ToRole="Employee" />
   </EntityType>
   <EntityType Name="October_2023">
@@ -840,7 +840,7 @@
     <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="C31" Type="Int32" />
     <Property Name="C31DailiSalary" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MonthliSalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__October_2__IdEmp__2DD1C37F" FromRole="October_2023" ToRole="Employee" />
   </EntityType>
   <EntityType Name="Register">
@@ -922,7 +922,7 @@
     <Property Name="C29DailiSalary" Type="Decimal" Precision="5" Scale="2" />
     <Property Name="C30" Type="Int32" />
     <Property Name="C30DailiSalary" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="MonthiySalary" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MonthliSalary" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__September__IdEmp__2CDD9F46" FromRole="September_2023" ToRole="Employee" />
   </EntityType>
   <Association Name="FK__April_202__IdEmp__2818EA29">
@@ -967,7 +967,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Employee__IdPosi__3A81B327">
+  <Association Name="FK__Employee__IdPosi__384F51F2">
     <End Role="PositionsAndPay" Type="Self.PositionsAndPay" Multiplicity="1" />
     <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
     <ReferentialConstraint>
@@ -993,7 +993,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__January_2__IdEmp__253C7D7E">
+  <Association Name="FK__January_2__IdEmp__3943762B">
     <End Role="Employee" Type="Self.Employee" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
@@ -1105,10 +1105,10 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="PayrollTrackingDBEntities2" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Employee" EntityType="Self.Employee" />
-    <EntitySet Name="PositionsAndPay" EntityType="Self.PositionsAndPay" />
-    <EntitySet Name="SalaryBonuses" EntityType="Self.SalaryBonuses" />
+  <EntityContainer Name="PayrollTrackingDBEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="PositionsAndPays" EntityType="Self.PositionsAndPay" />
+    <EntitySet Name="SalaryBonuses" EntityType="Self.SalaryBonus" />
     <EntitySet Name="April_2023" EntityType="Self.April_2023" />
     <EntitySet Name="August_2023" EntityType="Self.August_2023" />
     <EntitySet Name="December_2023" EntityType="Self.December_2023" />
@@ -1120,58 +1120,58 @@
     <EntitySet Name="May_2023" EntityType="Self.May_2023" />
     <EntitySet Name="November_2023" EntityType="Self.November_2023" />
     <EntitySet Name="October_2023" EntityType="Self.October_2023" />
-    <EntitySet Name="Register" EntityType="Self.Register" />
+    <EntitySet Name="Registers" EntityType="Self.Register" />
     <EntitySet Name="September_2023" EntityType="Self.September_2023" />
     <AssociationSet Name="FK__April_202__IdEmp__2818EA29" Association="Self.FK__April_202__IdEmp__2818EA29">
-      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Employee" EntitySet="Employees" />
       <End Role="April_2023" EntitySet="April_2023" />
     </AssociationSet>
     <AssociationSet Name="FK__August_20__IdEmp__2BE97B0D" Association="Self.FK__August_20__IdEmp__2BE97B0D">
-      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Employee" EntitySet="Employees" />
       <End Role="August_2023" EntitySet="August_2023" />
     </AssociationSet>
     <AssociationSet Name="FK__December___IdEmp__2FBA0BF1" Association="Self.FK__December___IdEmp__2FBA0BF1">
-      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Employee" EntitySet="Employees" />
       <End Role="December_2023" EntitySet="December_2023" />
     </AssociationSet>
-    <AssociationSet Name="FK__Employee__IdPosi__3A81B327" Association="Self.FK__Employee__IdPosi__3A81B327">
-      <End Role="PositionsAndPay" EntitySet="PositionsAndPay" />
-      <End Role="Employee" EntitySet="Employee" />
+    <AssociationSet Name="FK__Employee__IdPosi__384F51F2" Association="Self.FK__Employee__IdPosi__384F51F2">
+      <End Role="PositionsAndPay" EntitySet="PositionsAndPays" />
+      <End Role="Employee" EntitySet="Employees" />
     </AssociationSet>
     <AssociationSet Name="FK__February___IdEmp__2630A1B7" Association="Self.FK__February___IdEmp__2630A1B7">
-      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Employee" EntitySet="Employees" />
       <End Role="February_2023" EntitySet="February_2023" />
     </AssociationSet>
-    <AssociationSet Name="FK__January_2__IdEmp__253C7D7E" Association="Self.FK__January_2__IdEmp__253C7D7E">
-      <End Role="Employee" EntitySet="Employee" />
+    <AssociationSet Name="FK__January_2__IdEmp__3943762B" Association="Self.FK__January_2__IdEmp__3943762B">
+      <End Role="Employee" EntitySet="Employees" />
       <End Role="January_2023" EntitySet="January_2023" />
     </AssociationSet>
     <AssociationSet Name="FK__July_2023__IdEmp__2AF556D4" Association="Self.FK__July_2023__IdEmp__2AF556D4">
-      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Employee" EntitySet="Employees" />
       <End Role="July_2023" EntitySet="July_2023" />
     </AssociationSet>
     <AssociationSet Name="FK__June_2023__IdEmp__2A01329B" Association="Self.FK__June_2023__IdEmp__2A01329B">
-      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Employee" EntitySet="Employees" />
       <End Role="June_2023" EntitySet="June_2023" />
     </AssociationSet>
     <AssociationSet Name="FK__March_202__IdEmp__2724C5F0" Association="Self.FK__March_202__IdEmp__2724C5F0">
-      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Employee" EntitySet="Employees" />
       <End Role="March_2023" EntitySet="March_2023" />
     </AssociationSet>
     <AssociationSet Name="FK__May_2023__IdEmpl__290D0E62" Association="Self.FK__May_2023__IdEmpl__290D0E62">
-      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Employee" EntitySet="Employees" />
       <End Role="May_2023" EntitySet="May_2023" />
     </AssociationSet>
     <AssociationSet Name="FK__November___IdEmp__2EC5E7B8" Association="Self.FK__November___IdEmp__2EC5E7B8">
-      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Employee" EntitySet="Employees" />
       <End Role="November_2023" EntitySet="November_2023" />
     </AssociationSet>
     <AssociationSet Name="FK__October_2__IdEmp__2DD1C37F" Association="Self.FK__October_2__IdEmp__2DD1C37F">
-      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Employee" EntitySet="Employees" />
       <End Role="October_2023" EntitySet="October_2023" />
     </AssociationSet>
     <AssociationSet Name="FK__September__IdEmp__2CDD9F46" Association="Self.FK__September__IdEmp__2CDD9F46">
-      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Employee" EntitySet="Employees" />
       <End Role="September_2023" EntitySet="September_2023" />
     </AssociationSet>
   </EntityContainer>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище PayrollTrackingDBModelContainer" CdmEntityContainer="PayrollTrackingDBEntities2">
-    <EntitySetMapping Name="Employee">
+  <EntityContainerMapping StorageEntityContainer="Хранилище PayrollTrackingDBModelContainer" CdmEntityContainer="PayrollTrackingDBEntities3">
+    <EntitySetMapping Name="Employees">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.Employee">
         <MappingFragment StoreEntitySet="Employee">
           <ScalarProperty Name="Id" ColumnName="Id" />
@@ -13,7 +13,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PositionsAndPay">
+    <EntitySetMapping Name="PositionsAndPays">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.PositionsAndPay">
         <MappingFragment StoreEntitySet="PositionsAndPay">
           <ScalarProperty Name="Id" ColumnName="Id" />
@@ -23,7 +23,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SalaryBonuses">
-      <EntityTypeMapping TypeName="PayrollTrackingDBModel.SalaryBonuses">
+      <EntityTypeMapping TypeName="PayrollTrackingDBModel.SalaryBonus">
         <MappingFragment StoreEntitySet="SalaryBonuses">
           <ScalarProperty Name="BonusID" ColumnName="BonusID" />
           <ScalarProperty Name="BonusName" ColumnName="BonusName" />
@@ -97,7 +97,7 @@
           <ScalarProperty Name="C29DailiSalary" ColumnName="29DailiSalary" />
           <ScalarProperty Name="C30" ColumnName="30" />
           <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
-          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+          <ScalarProperty Name="MonthliSalary" ColumnName="MonthliSalary" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -169,7 +169,7 @@
           <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
           <ScalarProperty Name="C31" ColumnName="31" />
           <ScalarProperty Name="C31DailiSalary" ColumnName="31DailiSalary" />
-          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+          <ScalarProperty Name="MonthliSalary" ColumnName="MonthliSalary" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -241,7 +241,7 @@
           <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
           <ScalarProperty Name="C31" ColumnName="31" />
           <ScalarProperty Name="C31DailiSalary" ColumnName="31DailiSalary" />
-          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+          <ScalarProperty Name="MonthliSalary" ColumnName="MonthliSalary" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -307,7 +307,7 @@
           <ScalarProperty Name="C27DailiSalary" ColumnName="27DailiSalary" />
           <ScalarProperty Name="C28" ColumnName="28" />
           <ScalarProperty Name="C28DailiSalary" ColumnName="28DailiSalary" />
-          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+          <ScalarProperty Name="MonthliSalary" ColumnName="MonthliSalary" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -379,7 +379,7 @@
           <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
           <ScalarProperty Name="C31" ColumnName="31" />
           <ScalarProperty Name="C31DailiSalary" ColumnName="31DailiSalary" />
-          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+          <ScalarProperty Name="MonthliSalary" ColumnName="MonthliSalary" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -451,7 +451,7 @@
           <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
           <ScalarProperty Name="C31" ColumnName="31" />
           <ScalarProperty Name="C31DailiSalary" ColumnName="31DailiSalary" />
-          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+          <ScalarProperty Name="MonthliSalary" ColumnName="MonthliSalary" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -521,7 +521,7 @@
           <ScalarProperty Name="C29DailiSalary" ColumnName="29DailiSalary" />
           <ScalarProperty Name="C30" ColumnName="30" />
           <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
-          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+          <ScalarProperty Name="MonthliSalary" ColumnName="MonthliSalary" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -593,7 +593,7 @@
           <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
           <ScalarProperty Name="C31" ColumnName="31" />
           <ScalarProperty Name="C31DailiSalary" ColumnName="31DailiSalary" />
-          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+          <ScalarProperty Name="MonthliSalary" ColumnName="MonthliSalary" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -665,7 +665,7 @@
           <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
           <ScalarProperty Name="C31" ColumnName="31" />
           <ScalarProperty Name="C31DailiSalary" ColumnName="31DailiSalary" />
-          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+          <ScalarProperty Name="MonthliSalary" ColumnName="MonthliSalary" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -735,7 +735,7 @@
           <ScalarProperty Name="C29DailiSalary" ColumnName="29DailiSalary" />
           <ScalarProperty Name="C30" ColumnName="30" />
           <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
-          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+          <ScalarProperty Name="MonthliSalary" ColumnName="MonthliSalary" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -807,11 +807,11 @@
           <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
           <ScalarProperty Name="C31" ColumnName="31" />
           <ScalarProperty Name="C31DailiSalary" ColumnName="31DailiSalary" />
-          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+          <ScalarProperty Name="MonthliSalary" ColumnName="MonthliSalary" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Register">
+    <EntitySetMapping Name="Registers">
       <EntityTypeMapping TypeName="PayrollTrackingDBModel.Register">
         <MappingFragment StoreEntitySet="Register">
           <ScalarProperty Name="Id_user" ColumnName="Id_user" />
@@ -886,7 +886,7 @@
           <ScalarProperty Name="C29DailiSalary" ColumnName="29DailiSalary" />
           <ScalarProperty Name="C30" ColumnName="30" />
           <ScalarProperty Name="C30DailiSalary" ColumnName="30DailiSalary" />
-          <ScalarProperty Name="MonthiySalary" ColumnName="MonthiySalary" />
+          <ScalarProperty Name="MonthliSalary" ColumnName="MonthliSalary" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

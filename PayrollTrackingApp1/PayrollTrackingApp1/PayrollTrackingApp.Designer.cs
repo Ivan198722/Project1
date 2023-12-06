@@ -79,7 +79,7 @@
             this.salarySettingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1797, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1797, 30);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -108,20 +108,22 @@
             this.novemberToolStripMenuItem,
             this.decemberToolStripMenuItem});
             this.timekeepingLedgerToolStripMenuItem.Name = "timekeepingLedgerToolStripMenuItem";
-            this.timekeepingLedgerToolStripMenuItem.Size = new System.Drawing.Size(159, 24);
+            this.timekeepingLedgerToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.timekeepingLedgerToolStripMenuItem.Text = "Timekeeping Ledger";
             // 
             // jenuaryToolStripMenuItem
             // 
             this.jenuaryToolStripMenuItem.Name = "jenuaryToolStripMenuItem";
-            this.jenuaryToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.jenuaryToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.jenuaryToolStripMenuItem.Text = "January";
+            this.jenuaryToolStripMenuItem.Click += new System.EventHandler(this.jenuaryToolStripMenuItem_Click);
             // 
             // febrToolStripMenuItem
             // 
             this.febrToolStripMenuItem.Name = "febrToolStripMenuItem";
-            this.febrToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.febrToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.febrToolStripMenuItem.Text = "February";
+            this.febrToolStripMenuItem.Click += new System.EventHandler(this.febrToolStripMenuItem_Click);
             // 
             // marchToolStripMenuItem
             // 
@@ -204,6 +206,7 @@
             this.bonusSettingsToolStripMenuItem.Name = "bonusSettingsToolStripMenuItem";
             this.bonusSettingsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.bonusSettingsToolStripMenuItem.Text = "Bonus Settings";
+            this.bonusSettingsToolStripMenuItem.Click += new System.EventHandler(this.bonusSettingsToolStripMenuItem_Click);
             // 
             // linkLabel1
             // 

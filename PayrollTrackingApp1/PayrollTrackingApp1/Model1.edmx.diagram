@@ -4,10 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0a2ea472bd1643ab9ee2ee6206d08ce4" Name="Diagram1">
+      <Diagram DiagramId="cfeedfc1956a42119a534b03e2ec4be1" Name="Diagram1">
         <EntityTypeShape EntityType="PayrollTrackingDBModel.Employee" Width="1.5" PointX="3" PointY="93.25" IsExpanded="true" />
         <EntityTypeShape EntityType="PayrollTrackingDBModel.PositionsAndPay" Width="1.5" PointX="0.75" PointY="94.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PayrollTrackingDBModel.SalaryBonuses" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayrollTrackingDBModel.SalaryBonus" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PayrollTrackingDBModel.April_2023" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
         <EntityTypeShape EntityType="PayrollTrackingDBModel.August_2023" Width="1.5" PointX="5.25" PointY="23.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PayrollTrackingDBModel.December_2023" Width="1.5" PointX="5.25" PointY="38.375" IsExpanded="true" />
@@ -24,9 +24,9 @@
         <AssociationConnector Association="PayrollTrackingDBModel.FK__April_202__IdEmp__2818EA29" ManuallyRouted="false" />
         <AssociationConnector Association="PayrollTrackingDBModel.FK__August_20__IdEmp__2BE97B0D" ManuallyRouted="false" />
         <AssociationConnector Association="PayrollTrackingDBModel.FK__December___IdEmp__2FBA0BF1" ManuallyRouted="false" />
-        <AssociationConnector Association="PayrollTrackingDBModel.FK__Employee__IdPosi__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollTrackingDBModel.FK__Employee__IdPosi__384F51F2" ManuallyRouted="false" />
         <AssociationConnector Association="PayrollTrackingDBModel.FK__February___IdEmp__2630A1B7" ManuallyRouted="false" />
-        <AssociationConnector Association="PayrollTrackingDBModel.FK__January_2__IdEmp__253C7D7E" ManuallyRouted="false" />
+        <AssociationConnector Association="PayrollTrackingDBModel.FK__January_2__IdEmp__3943762B" ManuallyRouted="false" />
         <AssociationConnector Association="PayrollTrackingDBModel.FK__July_2023__IdEmp__2AF556D4" ManuallyRouted="false" />
         <AssociationConnector Association="PayrollTrackingDBModel.FK__June_2023__IdEmp__2A01329B" ManuallyRouted="false" />
         <AssociationConnector Association="PayrollTrackingDBModel.FK__March_202__IdEmp__2724C5F0" ManuallyRouted="false" />
