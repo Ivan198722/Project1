@@ -63,5 +63,11 @@ namespace PayrollTrackingApp1
             if (!Application.OpenForms.OfType<February>().Any())
                 new February().Show();
         }
+
+        private void marchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<March>().Any())
+                new March().Show();
+        }
     }
 }

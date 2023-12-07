@@ -103,6 +103,12 @@
     <Compile Include="June_2023.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="March.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="March.Designer.cs">
+      <DependentUpon>March.cs</DependentUpon>
+    </Compile>
     <Compile Include="March_2023.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -160,6 +166,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PayrollTrackingDBDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollTrackingDBDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PayrollTrackingDBDataSet13.xsd</DependentUpon>
     </Compile>
     <Compile Include="PayrollTrackingDBDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -242,6 +253,9 @@
     <EmbeddedResource Include="January.resx">
       <DependentUpon>January.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="March.resx">
+      <DependentUpon>March.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PayrollTrackingApp.resx">
       <DependentUpon>PayrollTrackingApp.cs</DependentUpon>
     </EmbeddedResource>
@@ -321,6 +335,17 @@
     </None>
     <None Include="PayrollTrackingDBDataSet12.xss">
       <DependentUpon>PayrollTrackingDBDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="PayrollTrackingDBDataSet13.xsc">
+      <DependentUpon>PayrollTrackingDBDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="PayrollTrackingDBDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PayrollTrackingDBDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PayrollTrackingDBDataSet13.xss">
+      <DependentUpon>PayrollTrackingDBDataSet13.xsd</DependentUpon>
     </None>
     <None Include="PayrollTrackingDBDataSet2.xsc">
       <DependentUpon>PayrollTrackingDBDataSet2.xsd</DependentUpon>
