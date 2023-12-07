@@ -33,9 +33,9 @@ namespace PayrollTrackingApp1
         private void employeeInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            if (!Application.OpenForms.OfType<Employee_Information>().Any())
+            if (!Application.OpenForms.OfType<Employees>().Any())
 
-                new Employee_Information().Show();
+                new Employees().Show();
         }
 
         private void positionalRatesToolStripMenuItem_Click(object sender, EventArgs e)

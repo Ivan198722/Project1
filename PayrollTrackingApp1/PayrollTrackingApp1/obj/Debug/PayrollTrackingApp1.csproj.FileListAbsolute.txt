@@ -14,10 +14,11 @@ C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingAp
 C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.exe
 C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.pdb
 C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.PayrollTrackingApp.resources
-C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.Employee_Information.resources
 C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.Regisration.resources
 C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.Position_Rates.resources
 C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.Bonus_Settings.resources
 C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.January.resources
 C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.February.resources
 C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.March.resources
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.Employees.resources
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.April.resources

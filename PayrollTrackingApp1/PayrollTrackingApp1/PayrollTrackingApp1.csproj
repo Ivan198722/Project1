@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="April.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="April.Designer.cs">
+      <DependentUpon>April.cs</DependentUpon>
+    </Compile>
     <Compile Include="April_2023.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -70,11 +76,11 @@
     <Compile Include="December_2023.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Employee Information.cs">
+    <Compile Include="Employees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employee Information.Designer.cs">
-      <DependentUpon>Employee Information.cs</DependentUpon>
+    <Compile Include="Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -152,16 +158,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PayrollTrackingDBDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PayrollTrackingDBDataSet10.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PayrollTrackingDBDataSet10.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="PayrollTrackingDBDataSet11.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PayrollTrackingDBDataSet11.xsd</DependentUpon>
-    </Compile>
     <Compile Include="PayrollTrackingDBDataSet12.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -197,16 +193,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PayrollTrackingDBDataSet6.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PayrollTrackingDBDataSet7.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PayrollTrackingDBDataSet7.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="PayrollTrackingDBDataSet8.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PayrollTrackingDBDataSet8.xsd</DependentUpon>
-    </Compile>
     <Compile Include="PayrollTrackingDBDataSet9.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -238,14 +224,17 @@
     <Compile Include="September_2023.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="April.resx">
+      <DependentUpon>April.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bonus Settings.resx">
       <DependentUpon>Bonus Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee Information.resx">
-      <DependentUpon>Employee Information.cs</DependentUpon>
+    <EmbeddedResource Include="Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="February.resx">
       <DependentUpon>February.cs</DependentUpon>
@@ -302,28 +291,6 @@
     </None>
     <None Include="PayrollTrackingDBDataSet1.xss">
       <DependentUpon>PayrollTrackingDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="PayrollTrackingDBDataSet10.xsc">
-      <DependentUpon>PayrollTrackingDBDataSet10.xsd</DependentUpon>
-    </None>
-    <None Include="PayrollTrackingDBDataSet10.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PayrollTrackingDBDataSet10.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PayrollTrackingDBDataSet10.xss">
-      <DependentUpon>PayrollTrackingDBDataSet10.xsd</DependentUpon>
-    </None>
-    <None Include="PayrollTrackingDBDataSet11.xsc">
-      <DependentUpon>PayrollTrackingDBDataSet11.xsd</DependentUpon>
-    </None>
-    <None Include="PayrollTrackingDBDataSet11.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PayrollTrackingDBDataSet11.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PayrollTrackingDBDataSet11.xss">
-      <DependentUpon>PayrollTrackingDBDataSet11.xsd</DependentUpon>
     </None>
     <None Include="PayrollTrackingDBDataSet12.xsc">
       <DependentUpon>PayrollTrackingDBDataSet12.xsd</DependentUpon>
@@ -401,28 +368,6 @@
     </None>
     <None Include="PayrollTrackingDBDataSet6.xss">
       <DependentUpon>PayrollTrackingDBDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="PayrollTrackingDBDataSet7.xsc">
-      <DependentUpon>PayrollTrackingDBDataSet7.xsd</DependentUpon>
-    </None>
-    <None Include="PayrollTrackingDBDataSet7.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PayrollTrackingDBDataSet7.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PayrollTrackingDBDataSet7.xss">
-      <DependentUpon>PayrollTrackingDBDataSet7.xsd</DependentUpon>
-    </None>
-    <None Include="PayrollTrackingDBDataSet8.xsc">
-      <DependentUpon>PayrollTrackingDBDataSet8.xsd</DependentUpon>
-    </None>
-    <None Include="PayrollTrackingDBDataSet8.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PayrollTrackingDBDataSet8.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PayrollTrackingDBDataSet8.xss">
-      <DependentUpon>PayrollTrackingDBDataSet8.xsd</DependentUpon>
     </None>
     <None Include="PayrollTrackingDBDataSet9.xsc">
       <DependentUpon>PayrollTrackingDBDataSet9.xsd</DependentUpon>
