@@ -19,7 +19,7 @@ namespace PayrollTrackingApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new April ());
+            Application.Run(new Authorization ());
         }
     }
 }

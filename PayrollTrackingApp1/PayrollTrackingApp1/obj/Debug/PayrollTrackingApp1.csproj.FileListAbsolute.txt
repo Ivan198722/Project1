@@ -22,3 +22,11 @@ C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingAp
 C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.March.resources
 C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.Employees.resources
 C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.April.resources
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.May.resources
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.June.resources
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.July.resources
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.August.resources
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.September.resources
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.October.resources
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.November.resources
+C:\MyProject\PayrollTrackingApp1\PayrollTrackingApp1\obj\Debug\PayrollTrackingApp1.December.resources

@@ -38,6 +38,7 @@
             this.Enter_button = new System.Windows.Forms.Button();
             this.close_eye = new System.Windows.Forms.PictureBox();
             this.open_eye = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_eye)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.open_eye)).BeginInit();
@@ -126,11 +127,21 @@
             this.open_eye.TabStop = false;
             this.open_eye.Click += new System.EventHandler(this.open_eye_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 422);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(180, 16);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "login: admin, pasword: admin";
+            // 
             // Authorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.open_eye);
             this.Controls.Add(this.close_eye);
             this.Controls.Add(this.Enter_button);
@@ -140,6 +151,7 @@
             this.Controls.Add(this.login_textBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "Authorization";
             this.Load += new System.EventHandler(this.Authorization_Load);
@@ -163,6 +175,7 @@
         private System.Windows.Forms.Button Enter_button;
         private System.Windows.Forms.PictureBox close_eye;
         private System.Windows.Forms.PictureBox open_eye;
+        private System.Windows.Forms.Label label4;
     }
 }
 

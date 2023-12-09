@@ -137,54 +137,63 @@
             this.aprilToolStripMenuItem.Name = "aprilToolStripMenuItem";
             this.aprilToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.aprilToolStripMenuItem.Text = "April";
+            this.aprilToolStripMenuItem.Click += new System.EventHandler(this.aprilToolStripMenuItem_Click);
             // 
             // mayToolStripMenuItem
             // 
             this.mayToolStripMenuItem.Name = "mayToolStripMenuItem";
             this.mayToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.mayToolStripMenuItem.Text = "May";
+            this.mayToolStripMenuItem.Click += new System.EventHandler(this.mayToolStripMenuItem_Click);
             // 
             // juneToolStripMenuItem
             // 
             this.juneToolStripMenuItem.Name = "juneToolStripMenuItem";
             this.juneToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.juneToolStripMenuItem.Text = "June";
+            this.juneToolStripMenuItem.Click += new System.EventHandler(this.juneToolStripMenuItem_Click);
             // 
             // julyToolStripMenuItem
             // 
             this.julyToolStripMenuItem.Name = "julyToolStripMenuItem";
             this.julyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.julyToolStripMenuItem.Text = "July";
+            this.julyToolStripMenuItem.Click += new System.EventHandler(this.julyToolStripMenuItem_Click);
             // 
             // augustToolStripMenuItem
             // 
             this.augustToolStripMenuItem.Name = "augustToolStripMenuItem";
             this.augustToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.augustToolStripMenuItem.Text = "August";
+            this.augustToolStripMenuItem.Click += new System.EventHandler(this.augustToolStripMenuItem_Click);
             // 
             // septemberToolStripMenuItem
             // 
             this.septemberToolStripMenuItem.Name = "septemberToolStripMenuItem";
             this.septemberToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.septemberToolStripMenuItem.Text = "September";
+            this.septemberToolStripMenuItem.Click += new System.EventHandler(this.septemberToolStripMenuItem_Click);
             // 
             // octoberToolStripMenuItem
             // 
             this.octoberToolStripMenuItem.Name = "octoberToolStripMenuItem";
             this.octoberToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.octoberToolStripMenuItem.Text = "October";
+            this.octoberToolStripMenuItem.Click += new System.EventHandler(this.octoberToolStripMenuItem_Click);
             // 
             // novemberToolStripMenuItem
             // 
             this.novemberToolStripMenuItem.Name = "novemberToolStripMenuItem";
             this.novemberToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.novemberToolStripMenuItem.Text = "November";
+            this.novemberToolStripMenuItem.Click += new System.EventHandler(this.novemberToolStripMenuItem_Click);
             // 
             // decemberToolStripMenuItem
             // 
             this.decemberToolStripMenuItem.Name = "decemberToolStripMenuItem";
             this.decemberToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.decemberToolStripMenuItem.Text = "December";
+            this.decemberToolStripMenuItem.Click += new System.EventHandler(this.decemberToolStripMenuItem_Click);
             // 
             // salarySettingsToolStripMenuItem
             // 

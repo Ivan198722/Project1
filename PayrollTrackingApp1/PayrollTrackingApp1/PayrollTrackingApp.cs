@@ -69,5 +69,62 @@ namespace PayrollTrackingApp1
             if (!Application.OpenForms.OfType<March>().Any())
                 new March().Show();
         }
+
+        private void aprilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (!Application.OpenForms.OfType<April>().Any())
+                new April().Show();
+        }
+
+        private void juneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (!Application.OpenForms.OfType<June>().Any())
+                new June().Show();
+        }
+
+        private void mayToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<May>().Any())
+                new May().Show();
+        }
+
+        private void julyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<July>().Any())
+                new July().Show();
+        }
+
+        private void augustToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<August>().Any())
+                new August().Show();
+        }
+
+        private void septemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (!Application.OpenForms.OfType<September>().Any())
+                new September().Show();
+        }
+
+        private void octoberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<October>().Any())
+                new October().Show();
+        }
+
+        private void novemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<November>().Any())
+                new November().Show();
+        }
+
+        private void decemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<December>().Any())
+                new December().Show();
+        }
     }
 }

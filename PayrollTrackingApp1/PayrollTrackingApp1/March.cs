@@ -272,7 +272,7 @@ namespace PayrollTrackingApp1
                     "[21]=" + day21 + ",[21DailiSalary]=" + WorkDaySalary(day21, id) + ",[22]=" + day22 + ",[22DailiSalary]=" + WorkDaySalary(day22, id) + ",[23]=" + day23 + ",[23DailiSalary]=" + WorkDaySalary(day23, id) + "," +
                     "[24]=" + day24 + ",[24DailiSalary]=" + WorkDaySalary(day24, id) + ",[25]=" + day25 + ",[25DailiSalary]=" + WeekendDaySalary(day25, id) + ",[26]=" + day26 + ",[26DailiSalary]=" + WeekendDaySalary(day26, id) + "," +
                     "[27]=" + day27 + ",[27DailiSalary]=" + WorkDaySalary(day27, id) + ",[28]=" + day28 + ",[28DailiSalary]=" + WorkDaySalary(day28, id) + ",[29]=" + day29 + ",[29DailiSalary]=" + WorkDaySalary(day29, id) + "," +
-                    "[30]=" + day27 + ",[30DailiSalary]=" + WorkDaySalary(day30, id) + ",[31]=" + day31 + ",[31DailiSalary]=" + WorkDaySalary(day31, id) + " WHERE Id = " + id;
+                    "[30]=" + day30 + ",[30DailiSalary]=" + WorkDaySalary(day30, id) + ",[31]=" + day31 + ",[31DailiSalary]=" + WorkDaySalary(day31, id) + " WHERE Id = " + id;
 
                 using (SqlCommand dbcommand = new SqlCommand(query, dB.GetConnection()))
                 {
