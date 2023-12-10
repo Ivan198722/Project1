@@ -35,7 +35,7 @@ namespace PayrollTrackingApp1
 
         private void February_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "payrollTrackingDBDataSet12.February_2023". При необходимости она может быть перемещена или удалена.
+        
             this.february_2023TableAdapter.Fill(this.payrollTrackingDBDataSet12.February_2023);
             this.WindowState = FormWindowState.Maximized;
         }
@@ -254,7 +254,7 @@ namespace PayrollTrackingApp1
 
             try
             {
-                // Выполняем запрос к БД
+                // Wykonaj zapytanie do bazy danych
                 string query = "UPDATE February_2023 SET [1]=" + day1 + ",[1DailiSalary]=" + WorkDaySalary(day1, id) + ",[2]=" + day2 + ",[2DailiSalary]=" + WorkDaySalary(day2, id) + "," +
                     "[3]=" + day3 + ",[3DailiSalary]=" + WorkDaySalary(day3, id) + ",[4]=" + day4 + ",[4DailiSalary]=" + WeekendDaySalary(day4, id) + ",[5]=" + day5 + ",[5DailiSalary]=" + WeekendDaySalary(day5, id) + "," +
                     "[6]=" + day6 + ",[6DailiSalary]=" + WorkDaySalary(day6, id) + ",[7DailiSalary]=" + WorkDaySalary(day7, id) + ",[8DailiSalary]=" + WorkDaySalary(day8, id) + "," +

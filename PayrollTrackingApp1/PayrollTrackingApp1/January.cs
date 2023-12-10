@@ -30,7 +30,7 @@ namespace PayrollTrackingApp1
             {
                 dataGridView1.Columns[i].Width = 0;
                 dataGridView1.Columns[i].ReadOnly = true;
-                // Uncomment the following line after testing
+                // Odkomentuj poniższą linię po zakończeniu testów
                 //dataGridView1.Columns[i].Visible = false;
             }
             dataGridView1.Columns[65].Width = 55;
@@ -46,15 +46,17 @@ namespace PayrollTrackingApp1
         {
             PayrollTrackingDBEntities3 dBEntities3 = new PayrollTrackingDBEntities3();
 
+            // Pobieramy dane z odpowiednich tabel w bazie danych
             dBEntities3.Employees.ToList();
-
             dBEntities3.PositionsAndPays.ToList();
-
             dBEntities3.January_2023.ToList();
-
             dBEntities3.SalaryBonuses.ToList();
+
+            // Konwertujemy wartości IdPerson i time na liczby całkowite
             int id = Int32.Parse(IdPerson);
             int t = Int32.Parse(time);
+
+            // Tworzymy zapytanie do bazy danych, łącząc odpowiednie tabele
             var query = from pos in dBEntities3.PositionsAndPays
                         join emp in dBEntities3.Employees on pos.Id equals emp.IdPosition
                         join month in dBEntities3.January_2023 on emp.Id equals month.IdEmployee
@@ -70,19 +72,24 @@ namespace PayrollTrackingApp1
             if (t <= 8)
             {
                 decimal daySalary = 0;
+
+                // Obliczamy dzienną pensję na podstawie ilości przepracowanych godzin
                 foreach (var item in query)
                 {
                     decimal money = (decimal)item.HourlySalary___;
                     daySalary = t * money;
                 }
+
+                // Konwertujemy wynik na string z uwzględnieniem kultury
                 string salary = daySalary.ToString(CultureInfo.InvariantCulture);
 
                 return salary;
-
             }
             else
             {
                 decimal overtimeSalary = 0;
+
+                // Obliczamy pensję za nadgodziny na podstawie ilości godzin nadliczbowych
                 foreach (var item in query)
                 {
                     decimal normalyDaySalary;
@@ -90,26 +97,29 @@ namespace PayrollTrackingApp1
                     decimal percentOverTime = (decimal)item.Percentage__ / 100;
                     normalyDaySalary = money * 8;
                     overtimeSalary = normalyDaySalary + ((t - 8) * money * (1 + percentOverTime));
-
                 }
+
+                // Konwertujemy wynik na string z uwzględnieniem kultury
                 string bonsalary = overtimeSalary.ToString(CultureInfo.InvariantCulture);
                 return bonsalary;
-
             }
-        }
+        
+    }
         private string WeekendDaySalary(string time, string IdPerson)
         {
             PayrollTrackingDBEntities3 dBEntities3 = new PayrollTrackingDBEntities3();
 
+            // Pobieramy dane z odpowiednich tabel w bazie danych
             dBEntities3.Employees.ToList();
-
             dBEntities3.PositionsAndPays.ToList();
-
             dBEntities3.January_2023.ToList();
-
             dBEntities3.SalaryBonuses.ToList();
+
+            // Konwertujemy wartości IdPerson i time na liczby całkowite
             int id = Int32.Parse(IdPerson);
             int t = Int32.Parse(time);
+
+            // Tworzymy zapytanie do bazy danych, łącząc odpowiednie tabele
             var query = from pos in dBEntities3.PositionsAndPays
                         join emp in dBEntities3.Employees on pos.Id equals emp.IdPosition
                         join month in dBEntities3.January_2023 on emp.Id equals month.IdEmployee
@@ -122,42 +132,55 @@ namespace PayrollTrackingApp1
                             bon.Percentage__
                         };
 
-
             decimal daySalary = 0;
+
+            // Obliczamy dzienną pensję w weekend na podstawie ilości przepracowanych godzin
             foreach (var item in query)
             {
                 decimal money = (decimal)item.HourlySalary___;
                 decimal percentOverTime = (decimal)item.Percentage__ / 100;
                 daySalary = t * money * (1 + percentOverTime);
             }
+
+            // Konwertujemy wynik na string z uwzględnieniem kultury
             string salary = daySalary.ToString(CultureInfo.InvariantCulture);
 
             return salary;
-
         }
 
         private string MonthSalary(string IdPerson)
         {
             PayrollTrackingDBEntities3 dBEntities3 = new PayrollTrackingDBEntities3();
+
+            // Pobieramy dane z odpowiednich tabel w bazie danych
             dBEntities3.January_2023.ToList();
+
+            // Konwertujemy wartość IdPerson na liczbę całkowitą
             int id = Int32.Parse(IdPerson);
+
+            // Tworzymy zapytanie do bazy danych, wybierając odpowiednie kolumny i sumując je
             var query = from month in dBEntities3.January_2023
                         where month.Id == id
                         select new
                         {
                             TotalMoney = month.C1DailiSalary + month.C2DailiSalary + month.C3DailiSalary + month.C4DailiSalary + month.C5DailiSalary + month.C6DailiSalary + month.C7DailiSalary
-                            + month.C8DailiSalary + month.C9DailiSalary + month.C10DailiSalary + month.C11DailiSalary + month.C12DailiSalary + month.C13DailiSalary+month.C14DailiSalary
-                            +month.C15DailiSalary+month.C16DailiSalary+month.C17DailiSalary+month.C18DailiSalary+month.C19DailiSalary+month.C20DailiSalary+month.C21DailiSalary
-                            +month.C22DailiSalary+month.C23DailiSalary+month.C24DailiSalary+month.C25DailiSalary+month.C26DailiSalary+month.C27DailiSalary+month.C28DailiSalary
-                            +month.C29DailiSalary+month.C30DailiSalary+month.C31DailiSalary
+                            + month.C8DailiSalary + month.C9DailiSalary + month.C10DailiSalary + month.C11DailiSalary + month.C12DailiSalary + month.C13DailiSalary + month.C14DailiSalary
+                            + month.C15DailiSalary + month.C16DailiSalary + month.C17DailiSalary + month.C18DailiSalary + month.C19DailiSalary + month.C20DailiSalary + month.C21DailiSalary
+                            + month.C22DailiSalary + month.C23DailiSalary + month.C24DailiSalary + month.C25DailiSalary + month.C26DailiSalary + month.C27DailiSalary + month.C28DailiSalary
+                            + month.C29DailiSalary + month.C30DailiSalary + month.C31DailiSalary
                         };
+
             decimal monthSalary = 0;
+
+            // Obliczamy miesięczną pensję na podstawie sumy odpowiednich kolumn
             foreach (var item in query)
             {
-                
                 monthSalary = (decimal)item.TotalMoney;
             }
+
+            // Konwertujemy wynik na string z uwzględnieniem kultury
             string salary = monthSalary.ToString(CultureInfo.InvariantCulture);
+
             return salary;
         }
 
@@ -172,26 +195,6 @@ namespace PayrollTrackingApp1
             int columnIndex = dataGridView1.SelectedCells[0].ColumnIndex;
             int rowIndex = dataGridView1.SelectedCells[0].RowIndex;
 
-
-            // Commenting out the data completeness check, assuming default values in the database are 0.
-            // The purpose of this check is to ensure that all necessary data is entered before processing.
-            // However, if your database has default values (e.g., 0) and it's acceptable, you may choose to skip this check.
-            //bool isDataIncomplete = false;
-
-            //for (int i = 0; i < dataGridView1.ColumnCount; i++)
-            //{
-            //    if (dataGridView1.Rows[rowIndex].Cells[i].Value == null)
-            //    {
-            //        isDataIncomplete = true;
-            //        break; 
-            //    }
-            //}
-
-            //if (isDataIncomplete)
-            //{
-            //    MessageBox.Show("Not all data is entered!");
-            //    return;
-            //}
 
             string id = dataGridView1.Rows[rowIndex].Cells[0].Value.ToString();
             string idEmployee = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
@@ -262,8 +265,8 @@ namespace PayrollTrackingApp1
            
                 try
                 {
-                    // Выполняем запрос к БД
-                    string query = "UPDATE January_2023 SET [1]=" + day1 + ",[1DailiSalary]=" + WeekendDaySalary(day1, id) + ",[2]=" + day2 + ",[2DailiSalary]=" + WorkDaySalary(day2, id) + "," +
+                // Wykonaj zapytanie do bazy danych
+                string query = "UPDATE January_2023 SET [1]=" + day1 + ",[1DailiSalary]=" + WeekendDaySalary(day1, id) + ",[2]=" + day2 + ",[2DailiSalary]=" + WorkDaySalary(day2, id) + "," +
                         "[3]=" + day3 + ",[3DailiSalary]=" + WorkDaySalary(day3, id) + ",[4]=" + day4 + ",[4DailiSalary]=" + WorkDaySalary(day4, id) + ",[5]=" + day5 + ",[5DailiSalary]=" + WorkDaySalary(day5, id) + "," +
                         "[6]=" + day6 + ",[6DailiSalary]=" + WeekendDaySalary(day6, id) + ",[7DailiSalary]=" + WeekendDaySalary(day7, id) + ",[8DailiSalary]=" + WeekendDaySalary(day8, id) + "," +
                         "[9]=" + day9 + ",[9DailiSalary]=" + WorkDaySalary(day9, id) + ",[10]=" + day10 + ",[10DailiSalary]=" + WorkDaySalary(day10, id) + ",[11]=" + day11 + ",[11DailiSalary]=" + WorkDaySalary(day11, id) + "," +

@@ -36,7 +36,7 @@ namespace PayrollTrackingApp1
             var loginUser = textBox_login.Text;
             var paswordUser = textBox_pasword.Text;
 
-            //SqlDataAdapter adapter = new SqlDataAdapter();
+          
 
 
 
@@ -44,7 +44,7 @@ namespace PayrollTrackingApp1
 
             SqlCommand command = new SqlCommand(queryString, dataBase.GetConnection());
 
-            dataBase.OpenConection();
+            dataBase.OpenConnection();
 
             if (command.ExecuteNonQuery() == 1)
             {
@@ -53,7 +53,7 @@ namespace PayrollTrackingApp1
             }
             else { MessageBox.Show("Account don't created!"); }
 
-            dataBase.CloseConection();
+            dataBase.CloseConnection();
 
         }
      

@@ -21,7 +21,7 @@ namespace PayrollTrackingApp1
 
         private void Bonus_Settings_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "payrollTrackingDBDataSet6.SalaryBonuses". При необходимости она может быть перемещена или удалена.
+          
             this.salaryBonusesTableAdapter.Fill(this.payrollTrackingDBDataSet6.SalaryBonuses);
             dataGridView1.EditingControlShowing += dataGridView1_EditingControlShowing;
         }
@@ -48,7 +48,7 @@ namespace PayrollTrackingApp1
             string id = dataGridView1.Rows[rowIndex].Cells[0].Value.ToString();
             string bonusName = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
 
-            
+            // Pobieramy wartość procentową z komórki i zamieniamy ewentualną kropkę na przecinek
             string percentage = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
             percentage = percentage.Replace(',', '.');
 
@@ -57,7 +57,7 @@ namespace PayrollTrackingApp1
 
             try
             {
-                // Выполняем запрос к БД
+                // Wykonujemy zapytanie do bazy danych
                 string query = "UPDATE SalaryBonuses SET [Percentage %] = " + percentage + " WHERE BonusID = " + id;
 
                 using (SqlCommand dbcommand = new SqlCommand(query, dB.GetConnection()))
@@ -81,7 +81,7 @@ namespace PayrollTrackingApp1
         {
             if (e.Control is TextBox textBox)
             {
-                textBox.KeyPress -= TextBox_KeyPress; // Убедимся, что обработчик не добавлен несколько раз
+                textBox.KeyPress -= TextBox_KeyPress; // Upewnijmy się, że obsługiwacz nie został dodany wielokrotnie
                 textBox.KeyPress += TextBox_KeyPress;
             }
         }
@@ -89,7 +89,7 @@ namespace PayrollTrackingApp1
         {
             if (e.KeyChar == '.')
             {
-                // Заменяем введенную точку на запятую
+                // Zamieniamy wprowadzoną kropkę na przecinek
                 e.KeyChar = ',';
             }
         }

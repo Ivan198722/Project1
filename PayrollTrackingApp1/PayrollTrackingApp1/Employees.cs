@@ -17,7 +17,7 @@ namespace PayrollTrackingApp1
         public Employees()
         {
             InitializeComponent();
-            dataGridView1.Columns[0].Width = 30;
+            dataGridView1.Columns[0].Width = 30;// Ustawienie szerokości kolumn w DataGridView.
             dataGridView1.Columns[1].Width = 80;
             dataGridView1.Columns[2].Width = 80;
             dataGridView1.Columns[3].Width = 50;
@@ -26,7 +26,7 @@ namespace PayrollTrackingApp1
 
         private void Emplloees_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "payrollTrackingDBDataSet3.Employee". При необходимости она может быть перемещена или удалена.
+            
             this.employeeTableAdapter.Fill(this.payrollTrackingDBDataSet3.Employee);
 
         }
@@ -34,8 +34,10 @@ namespace PayrollTrackingApp1
         private void add_button_Click(object sender, EventArgs e)
         {
 
+            // Pobranie indeksu zaznaczonego wiersza w DataGridView.
             int index = dataGridView1.SelectedRows[0].Index;
 
+            // Sprawdzenie, czy wszystkie dane są wprowadzone dla zaznaczonego wiersza.
             if (dataGridView1.Rows[index].Cells[0].Value == null ||
                dataGridView1.Rows[index].Cells[1].Value == null ||
                dataGridView1.Rows[index].Cells[2].Value == null ||
@@ -43,11 +45,12 @@ namespace PayrollTrackingApp1
                dataGridView1.Rows[index].Cells[4].Value == null ||
                dataGridView1.Rows[index].Cells[5].Value == null)
             {
+                // Wyświetlenie komunikatu o braku wprowadzonych danych.
                 MessageBox.Show("Not all data is entered!");
                 return;
             }
 
-
+            // Pobranie danych z zaznaczonego wiersza do zmiennych.
             string id = dataGridView1.Rows[index].Cells[0].Value.ToString();
             string FName = dataGridView1.Rows[index].Cells[1].Value.ToString();
             string LName = dataGridView1.Rows[index].Cells[2].Value.ToString();
@@ -56,12 +59,10 @@ namespace PayrollTrackingApp1
             string Phone = dataGridView1.Rows[index].Cells[5].Value.ToString();
 
 
-
             try
             {
 
-                // Выполянем запрос к БД
-                //dbconnection.Open();//открываем соеденение
+                // Wykonujemy zapytanie do bazy danych
                 string query = "INSERT INTO Employee Values ('" + FName + "', '" + LName + "'," + Age + "," + Position + ",' " + Phone + " ') " +
               "insert into [January_2023] (IdEmployee, EmployeeName) select Id, concat(FName, ' ', LName) from Employee  except select IdEmployee, EmployeeName from [January_2023]" +
               "insert into [February_2023] (IdEmployee, EmployeeName) select Id, concat(FName, ' ', LName) from Employee  except select IdEmployee, EmployeeName from [February_2023]" +
@@ -74,27 +75,31 @@ namespace PayrollTrackingApp1
               "insert into [September_2023] (IdEmployee, EmployeeName) select Id, concat(FName, ' ', LName) from Employee  except select IdEmployee, EmployeeName from [September_2023]" +
               "insert into [October_2023] (IdEmployee, EmployeeName) select Id, concat(FName, ' ', LName) from Employee  except select IdEmployee, EmployeeName from [October_2023]" +
               "insert into [November_2023] (IdEmployee, EmployeeName) select Id, concat(FName, ' ', LName) from Employee  except select IdEmployee, EmployeeName from [November_2023]" +
-              "insert into [December_2023] (IdEmployee, EmployeeName) select Id, concat(FName, ' ', LName) from Employee  except select IdEmployee, EmployeeName from [December_2023]";//строка запроса
+              "insert into [December_2023] (IdEmployee, EmployeeName) select Id, concat(FName, ' ', LName) from Employee  except select IdEmployee, EmployeeName from [December_2023]";// Łańcuch zapytania do bazy danych
 
 
-                SqlCommand dbcommand = new SqlCommand(query, dB.GetConnection());                                    //string query = "Delete from Person where id="+id+"";строка удаления данных
+                                                                          // Tworzymy obiekt SqlCommand z zapytaniem i podłączamy go do połączenia z bazą danych
+                SqlCommand dbCommand = new SqlCommand(query, dB.GetConnection());
+ 
+                                                      // Otwieramy połączenie z bazą danych
                 dB.GetConnection().Open();
-                dbcommand.ExecuteNonQuery();
-                //  MessageBox.Show("Data added!");
 
-
+                                                   // Wykonujemy niezależne od rodzaju zapytania (insert, update, delete)
+                dbCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                //throw ex;
+                                                        // Obsługa wyjątku, wyświetlamy komunikat z informacją o błędzie
                 MessageBox.Show($"Message: {ex.Message}", "Exception Thrown!");
             }
             finally
             {
+                                                               // Odświeżamy dane w DataGridView, niezależnie od tego, czy wystąpił błąd czy nie
                 this.employeeTableAdapter.Fill(this.payrollTrackingDBDataSet3.Employee);
+
+                                                                  // Zamykamy połączenie z bazą danych
                 dB.GetConnection().Close();
             }
-
 
         }
 
@@ -133,8 +138,7 @@ namespace PayrollTrackingApp1
             try
             {
 
-                // Выполянем запрос к БД
-                //dbconnection.Open();//открываем соеденение
+                // Wykonujemy zapytanie do bazy danych
                 string query = "UPDATE Employee set FName='" + FName + "' , LName='" + LName + "', Age=" + Age + ",IdPosition=" + Position + ", Phone= '" + Phone + "'  WHERE Id=" + id + "" +
                     " UPDATE  [January_2023] set  EmployeeName = concat('" + FName + "',' ','" + LName + "') where IdEmployee=" + id + "" +
                     "UPDATE  [February_2023] set  EmployeeName = concat('" + FName + "',' ','" + LName + "') where IdEmployee=" + id + "" +
@@ -147,13 +151,13 @@ namespace PayrollTrackingApp1
                   " UPDATE  [September_2023] set  EmployeeName = concat('" + FName + "',' ','" + LName + "') where IdEmployee=" + id + "" +
                   " UPDATE  [October_2023] set  EmployeeName = concat('" + FName + "',' ','" + LName + "') where IdEmployee=" + id + "" +
                   " UPDATE  [November_2023] set  EmployeeName = concat('" + FName + "',' ','" + LName + "') where IdEmployee=" + id + "" +
-                  " UPDATE  [December_2023] set  EmployeeName = concat('" + FName + "',' ','" + LName + "') where IdEmployee=" + id;//строка запроса
+                  " UPDATE  [December_2023] set  EmployeeName = concat('" + FName + "',' ','" + LName + "') where IdEmployee=" + id;// Łańcuch zapytania do bazy danych
 
 
-                SqlCommand dbcommand = new SqlCommand(query, dB.GetConnection());                                    //string query = "Delete from Person where id="+id+"";строка удаления данных
+                SqlCommand dbcommand = new SqlCommand(query, dB.GetConnection());                                  
                 dB.GetConnection().Open();
                 dbcommand.ExecuteNonQuery();
-                //MessageBox.Show("Data added!");
+              
 
 
             }
@@ -172,47 +176,46 @@ namespace PayrollTrackingApp1
         private void delete_button_Click(object sender, EventArgs e)
         {
 
-            //Проверим количество выбранных строк
+            // Sprawdźmy liczbę wybranych wierszy
             if (dataGridView1.SelectedRows.Count != 1)
             {
                 MessageBox.Show("Choose one line!", "Attention!");
                 return;
             }
 
-            //Запомним выбранную строку
+            // Zapamiętajmy wybrany wiersz
             int index = dataGridView1.SelectedRows[0].Index;
 
-            // Проверим данные в таблицы
+            // Sprawdźmy dane w tabeli
             if (dataGridView1.Rows[index].Cells[0].Value == null)
             {
                 MessageBox.Show("Not all data is entered!");
                 return;
             }
 
-            // Считаем данные
+           
             string id = dataGridView1.Rows[index].Cells[0].Value.ToString();
 
 
 
             try
             {
-                // Выполянем запрос к БД
-                // открываем соеденение
-                string query = "DELETE FROM Employee WHERE id = " + id;       // строка запроса
+                
+                string query = "DELETE FROM Employee WHERE id = " + id;       
 
-                SqlCommand dbcommand = new SqlCommand(query, dB.GetConnection());                                    //string query = "Delete from Person where id="+id+"";строка удаления данных
+                SqlCommand dbcommand = new SqlCommand(query, dB.GetConnection());                                   
                 dB.GetConnection().Open();
                 DialogResult result = MessageBox.Show("Deleting will permanently remove information about this employee. Continue?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
                 if (result == DialogResult.OK)
                 {
                     dbcommand.ExecuteNonQuery();
-                    // Код для удаления информации о сотруднике
+                 
                     Console.WriteLine("Employee information deleted.");
                 }
                 else
                 {
-                    // Код, который выполнится при выборе "Отмена"
+                 
                     Console.WriteLine("Deletion canceled.");
                 }
 
@@ -224,8 +227,7 @@ namespace PayrollTrackingApp1
             }
             finally
             {
-                // Закрываем соеденение с БД
-                this.employeeTableAdapter.Fill(this.payrollTrackingDBDataSet3.Employee);
+                              this.employeeTableAdapter.Fill(this.payrollTrackingDBDataSet3.Employee);
                 dB.GetConnection().Close();
             }
         }

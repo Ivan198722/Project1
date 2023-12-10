@@ -25,7 +25,7 @@ namespace PayrollTrackingApp1
         private void Position_Rates_Load(object sender, EventArgs e)
         {
 
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "payrollTrackingDBDataSet5.PositionsAndPay". При необходимости она может быть перемещена или удалена.
+            
             this.positionsAndPayTableAdapter.Fill(this.payrollTrackingDBDataSet5.PositionsAndPay);
 
             dataGridView1.EditingControlShowing += dataGridView1_EditingControlShowing;
@@ -67,13 +67,13 @@ namespace PayrollTrackingApp1
             string PositionName = dataGridView1.Rows[index].Cells[1].Value.ToString();
             string hourlySalary = dataGridView1.Rows[index].Cells[2].Value.ToString() ;
             hourlySalary = hourlySalary.Replace(',', '.');
+            // Sprawdzamy, czy wartość jest pusta, i jeśli tak, ustawiamy ją na "0"
             if (hourlySalary==string.Empty)
             { hourlySalary="0"; }
             try
             {
+                // Wykonujemy zapytanie do bazy danych
 
-                // Выполянем запрос к БД
-                //dbconnection.Open();//открываем соеденение
                 string query = "INSERT INTO  PositionsAndPay   Values ('" + PositionName + "',  " + hourlySalary + ")";
 
                 SqlCommand dbcommand = new SqlCommand(query, dB.GetConnection());
@@ -122,7 +122,7 @@ namespace PayrollTrackingApp1
 
             try
             {
-                // Выполняем запрос к БД
+                // Wykonujemy zapytanie do bazy danych
                 string query = "UPDATE PositionsAndPay SET [HourlySalary($)] = "+hourlySalary+" WHERE ID = " + id;
 
                 using (SqlCommand dbcommand = new SqlCommand(query, dB.GetConnection()))
