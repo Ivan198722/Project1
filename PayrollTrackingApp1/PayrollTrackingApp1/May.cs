@@ -40,124 +40,60 @@ namespace PayrollTrackingApp1
             this.may_2023TableAdapter.Fill(this.payrollTrackingDBDataSet7.May_2023);
             this.WindowState = FormWindowState.Maximized;
         }
-        private string WorkDaySalary(string time, string IdPerson)
+        class Salary : SalaryCalculator
         {
-            PayrollTrackingDBEntities3 dBEntities3 = new PayrollTrackingDBEntities3();
-
-            dBEntities3.Employees.ToList();
-
-            dBEntities3.PositionsAndPays.ToList();
-
-            dBEntities3.May_2023.ToList();
-
-            dBEntities3.SalaryBonuses.ToList();
-            int id = Int32.Parse(IdPerson);
-            int t = Int32.Parse(time);
-            var query = from pos in dBEntities3.PositionsAndPays
-                        join emp in dBEntities3.Employees on pos.Id equals emp.IdPosition
-                        join month in dBEntities3.May_2023 on emp.Id equals month.IdEmployee
-                        where month.Id == id
-                        from bon in dBEntities3.SalaryBonuses
-                        where bon.BonusID == 1
-                        select new
-                        {
-                            pos.HourlySalary___,
-                            bon.Percentage__
-                        };
-
-            if (t <= 8)
+            internal override IQueryable<object> GetSalaryData(int id)
             {
-                decimal daySalary = 0;
-                foreach (var item in query)
-                {
-                    decimal money = (decimal)item.HourlySalary___;
-                    daySalary = t * money;
-                }
-                string salary = daySalary.ToString(CultureInfo.InvariantCulture);
+                var query = from pos in _dbEntities.PositionsAndPays
+                            join emp in _dbEntities.Employees on pos.Id equals emp.IdPosition
+                            join month in _dbEntities.May_2023 on emp.Id equals month.IdEmployee
+                            where month.Id == id
+                            from bon in _dbEntities.SalaryBonuses
+                            where bon.BonusID == 1
+                            select new
+                            {
+                                pos.HourlySalary___,
+                                bon.Percentage__
+                            };
 
-                return salary;
+                return query;
 
             }
-            else
+            internal override IQueryable<object> GetSalaryData_Weekend(int id)
             {
-                decimal overtimeSalary = 0;
-                foreach (var item in query)
-                {
-                    decimal normalyDaySalary;
-                    decimal money = (decimal)item.HourlySalary___;
-                    decimal percentOverTime = (decimal)item.Percentage__ / 100;
-                    normalyDaySalary = money * 8;
-                    overtimeSalary = normalyDaySalary + ((t - 8) * money * (1 + percentOverTime));
+                var query = from pos in _dbEntities.PositionsAndPays
+                            join emp in _dbEntities.Employees on pos.Id equals emp.IdPosition
+                            join month in _dbEntities.May_2023 on emp.Id equals month.IdEmployee
+                            where month.Id == id
+                            from bon in _dbEntities.SalaryBonuses
+                            where bon.BonusID == 2
+                            select new
+                            {
+                                pos.HourlySalary___,
+                                bon.Percentage__
+                            };
 
-                }
-                string bonsalary = overtimeSalary.ToString(CultureInfo.InvariantCulture);
-                return bonsalary;
+                return query;
 
+            }
+
+            internal override IQueryable<object> GetSalaryData_Month(int id)
+            {
+
+                var query = from month in _dbEntities.May_2023
+                            where month.Id == id
+                            select new
+                            {
+                                TotalMoney = month.C1DailiSalary + month.C2DailiSalary + month.C3DailiSalary + month.C4DailiSalary + month.C5DailiSalary + month.C6DailiSalary + month.C7DailiSalary
+                                + month.C8DailiSalary + month.C9DailiSalary + month.C10DailiSalary + month.C11DailiSalary + month.C12DailiSalary + month.C13DailiSalary + month.C14DailiSalary
+                                + month.C15DailiSalary + month.C16DailiSalary + month.C17DailiSalary + month.C18DailiSalary + month.C19DailiSalary + month.C20DailiSalary + month.C21DailiSalary
+                                + month.C22DailiSalary + month.C23DailiSalary + month.C24DailiSalary + month.C25DailiSalary + month.C26DailiSalary + month.C27DailiSalary + month.C28DailiSalary
+                                + month.C29DailiSalary + month.C30DailiSalary + month.C31DailiSalary
+                            };
+                return query;
             }
         }
-        private string WeekendDaySalary(string time, string IdPerson)
-        {
-            PayrollTrackingDBEntities3 dBEntities3 = new PayrollTrackingDBEntities3();
-
-            dBEntities3.Employees.ToList();
-
-            dBEntities3.PositionsAndPays.ToList();
-
-            dBEntities3.May_2023.ToList();
-
-            dBEntities3.SalaryBonuses.ToList();
-            int id = Int32.Parse(IdPerson);
-            int t = Int32.Parse(time);
-            var query = from pos in dBEntities3.PositionsAndPays
-                        join emp in dBEntities3.Employees on pos.Id equals emp.IdPosition
-                        join month in dBEntities3.May_2023 on emp.Id equals month.IdEmployee
-                        where month.Id == id
-                        from bon in dBEntities3.SalaryBonuses
-                        where bon.BonusID == 2
-                        select new
-                        {
-                            pos.HourlySalary___,
-                            bon.Percentage__
-                        };
-
-
-            decimal daySalary = 0;
-            foreach (var item in query)
-            {
-                decimal money = (decimal)item.HourlySalary___;
-                decimal percentOverTime = (decimal)item.Percentage__ / 100;
-                daySalary = t * money * (1 + percentOverTime);
-            }
-            string salary = daySalary.ToString(CultureInfo.InvariantCulture);
-
-            return salary;
-
-        }
-
-        private string MonthSalary(string IdPerson)
-        {
-            PayrollTrackingDBEntities3 dBEntities3 = new PayrollTrackingDBEntities3();
-            dBEntities3.May_2023.ToList();
-            int id = Int32.Parse(IdPerson);
-            var query = from month in dBEntities3.May_2023
-                        where month.Id == id
-                        select new
-                        {
-                            TotalMoney = month.C1DailiSalary + month.C2DailiSalary + month.C3DailiSalary + month.C4DailiSalary + month.C5DailiSalary + month.C6DailiSalary + month.C7DailiSalary
-                            + month.C8DailiSalary + month.C9DailiSalary + month.C10DailiSalary + month.C11DailiSalary + month.C12DailiSalary + month.C13DailiSalary + month.C14DailiSalary
-                            + month.C15DailiSalary + month.C16DailiSalary + month.C17DailiSalary + month.C18DailiSalary + month.C19DailiSalary + month.C20DailiSalary + month.C21DailiSalary
-                            + month.C22DailiSalary + month.C23DailiSalary + month.C24DailiSalary + month.C25DailiSalary + month.C26DailiSalary + month.C27DailiSalary + month.C28DailiSalary
-                            + month.C29DailiSalary + month.C30DailiSalary + month.C31DailiSalary
-                        };
-            decimal monthSalary = 0;
-            foreach (var item in query)
-            {
-
-                monthSalary = (decimal)item.TotalMoney;
-            }
-            string salary = monthSalary.ToString(CultureInfo.InvariantCulture);
-            return salary;
-        }
+        Salary salary = new Salary();
 
         private void add_button_Click(object sender, EventArgs e)
         {
@@ -171,26 +107,7 @@ namespace PayrollTrackingApp1
             int rowIndex = dataGridView1.SelectedCells[0].RowIndex;
 
 
-            // Commenting out the data completeness check, assuming default values in the database are 0.
-            // The purpose of this check is to ensure that all necessary data is entered before processing.
-            // However, if your database has default values (e.g., 0) and it's acceptable, you may choose to skip this check.
-            //bool isDataIncomplete = false;
-
-            //for (int i = 0; i < dataGridView1.ColumnCount; i++)
-            //{
-            //    if (dataGridView1.Rows[rowIndex].Cells[i].Value == null)
-            //    {
-            //        isDataIncomplete = true;
-            //        break; 
-            //    }
-            //}
-
-            //if (isDataIncomplete)
-            //{
-            //    MessageBox.Show("Not all data is entered!");
-            //    return;
-            //}
-
+            
             string id = dataGridView1.Rows[rowIndex].Cells[0].Value.ToString();
             string idEmployee = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
             string employeeName = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
@@ -261,17 +178,17 @@ namespace PayrollTrackingApp1
             try
             {
                 // Выполняем запрос к БД
-                string query = "UPDATE May_2023 SET [1]=" + day1 + ",[1DailiSalary]=" + WeekendDaySalary(day1, id) + ",[2]=" + day2 + ",[2DailiSalary]=" + WorkDaySalary(day2, id) + "," +
-                    "[3]=" + day3 + ",[3DailiSalary]=" + WeekendDaySalary(day3, id) + ",[4]=" + day4 + ",[4DailiSalary]=" + WorkDaySalary(day4, id) + ",[5]=" + day5 + ",[5DailiSalary]=" + WorkDaySalary(day5, id) + "," +
-                    "[6]=" + day6 + ",[6DailiSalary]=" + WeekendDaySalary(day6, id) + ",[7DailiSalary]=" + WeekendDaySalary(day7, id) + ",[8DailiSalary]=" + WorkDaySalary(day8, id) + "," +
-                    "[9]=" + day9 + ",[9DailiSalary]=" + WorkDaySalary(day9, id) + ",[10]=" + day10 + ",[10DailiSalary]=" + WorkDaySalary(day10, id) + ",[11]=" + day11 + ",[11DailiSalary]=" + WorkDaySalary(day11, id) + "," +
-                    "[12]=" + day12 + ",[12DailiSalary]=" + WorkDaySalary(day12, id) + ",[13]=" + day13 + ",[13DailiSalary]=" + WeekendDaySalary(day13, id) + ",[14]=" + day14 + ",[14DailiSalary]=" + WeekendDaySalary(day14, id) + "," +
-                    "[15]=" + day15 + ",[15DailiSalary]=" + WorkDaySalary(day15, id) + ",[16]=" + day16 + ",[16DailiSalary]=" + WorkDaySalary(day16, id) + ",[17]=" + day17 + ",[17DailiSalary]=" + WorkDaySalary(day17, id) + "," +
-                    "[18]=" + day18 + ",[18DailiSalary]=" + WorkDaySalary(day18, id) + ",[19]=" + day19 + ",[19DailiSalary]=" + WorkDaySalary(day19, id) + ",[20]=" + day20 + ",[20DailiSalary]=" + WeekendDaySalary(day20, id) + "," +
-                    "[21]=" + day21 + ",[21DailiSalary]=" + WeekendDaySalary(day21, id) + ",[22]=" + day22 + ",[22DailiSalary]=" + WorkDaySalary(day22, id) + ",[23]=" + day23 + ",[23DailiSalary]=" + WorkDaySalary(day23, id) + "," +
-                    "[24]=" + day24 + ",[24DailiSalary]=" + WorkDaySalary(day24, id) + ",[25]=" + day25 + ",[25DailiSalary]=" + WorkDaySalary(day25, id) + ",[26]=" + day26 + ",[26DailiSalary]=" + WorkDaySalary(day26, id) + "," +
-                    "[27]=" + day27 + ",[27DailiSalary]=" + WeekendDaySalary(day27, id) + ",[28]=" + day28 + ",[28DailiSalary]=" + WeekendDaySalary(day28, id) + ",[29]=" + day29 + ",[29DailiSalary]=" + WorkDaySalary(day29, id) + "," +
-                    "[30]=" + day30 + ",[30DailiSalary]=" + WorkDaySalary(day30, id) + ",[31]=" + day31 + ",[31DailiSalary]=" + WorkDaySalary(day31, id) + " WHERE Id = " + id;
+                string query = "UPDATE May_2023 SET [1]=" + day1 + ",[1DailiSalary]=" +salary.WeekendDaySalary(day1, id) + ",[2]=" + day2 + ",[2DailiSalary]=" +salary.WorkDaySalary(day2, id) + "," +
+                    "[3]=" + day3 + ",[3DailiSalary]=" + salary.WeekendDaySalary(day3, id) + ",[4]=" + day4 + ",[4DailiSalary]=" +salary.WorkDaySalary(day4, id) + ",[5]=" + day5 + ",[5DailiSalary]=" + salary.WorkDaySalary(day5, id) + "," +
+                    "[6]=" + day6 + ",[6DailiSalary]=" + salary.WeekendDaySalary(day6, id) + ",[7]="+day7+",[7DailiSalary]=" + salary.WeekendDaySalary(day7, id) + ",[8]="+day8+",[8DailiSalary]=" + salary.WorkDaySalary(day8, id) + "," +
+                    "[9]=" + day9 + ",[9DailiSalary]=" + salary.WorkDaySalary(day9, id) + ",[10]=" + day10 + ",[10DailiSalary]=" + salary.WorkDaySalary(day10, id) + ",[11]=" + day11 + ",[11DailiSalary]=" + salary.WorkDaySalary(day11, id) + "," +
+                    "[12]=" + day12 + ",[12DailiSalary]=" + salary.WorkDaySalary(day12, id) + ",[13]=" + day13 + ",[13DailiSalary]=" + salary.WeekendDaySalary(day13, id) + ",[14]=" + day14 + ",[14DailiSalary]=" + salary.WeekendDaySalary(day14, id) + "," +
+                    "[15]=" + day15 + ",[15DailiSalary]=" + salary.WorkDaySalary(day15, id) + ",[16]=" + day16 + ",[16DailiSalary]=" + salary.WorkDaySalary(day16, id) + ",[17]=" + day17 + ",[17DailiSalary]=" + salary.WorkDaySalary(day17, id) + "," +
+                    "[18]=" + day18 + ",[18DailiSalary]=" + salary.WorkDaySalary(day18, id) + ",[19]=" + day19 + ",[19DailiSalary]=" + salary.WorkDaySalary(day19, id) + ",[20]=" + day20 + ",[20DailiSalary]=" + salary.WeekendDaySalary(day20, id) + "," +
+                    "[21]=" + day21 + ",[21DailiSalary]=" + salary.WeekendDaySalary(day21, id) + ",[22]=" + day22 + ",[22DailiSalary]=" + salary.WorkDaySalary(day22, id) + ",[23]=" + day23 + ",[23DailiSalary]=" + salary.WorkDaySalary(day23, id) + "," +
+                    "[24]=" + day24 + ",[24DailiSalary]=" + salary.WorkDaySalary(day24, id) + ",[25]=" + day25 + ",[25DailiSalary]=" + salary.WorkDaySalary(day25, id) + ",[26]=" + day26 + ",[26DailiSalary]=" + salary.WorkDaySalary(day26, id) + "," +
+                    "[27]=" + day27 + ",[27DailiSalary]=" + salary.WeekendDaySalary(day27, id) + ",[28]=" + day28 + ",[28DailiSalary]=" + salary.WeekendDaySalary(day28, id) + ",[29]=" + day29 + ",[29DailiSalary]=" + salary.     WorkDaySalary(day29, id) + "," +
+                    "[30]=" + day30 + ",[30DailiSalary]=" + salary.WorkDaySalary(day30, id) + ",[31]=" + day31 + ",[31DailiSalary]=" + salary.WorkDaySalary(day31, id) + " WHERE Id = " + id;
 
                 using (SqlCommand dbcommand = new SqlCommand(query, dB.GetConnection()))
                 {
@@ -288,7 +205,7 @@ namespace PayrollTrackingApp1
 
             try
             {
-                string query1 = "UPDATE May_2023 SET MonthliSalary=" + MonthSalary(id) + " where Id=" + id;
+                string query1 = "UPDATE May_2023 SET MonthliSalary=" + salary.MonthSalary(id) + " where Id=" + id;
                 using (SqlCommand dbcommand = new SqlCommand(query1, dB.GetConnection()))
                 {
                     dB.GetConnection().Open();

@@ -303,6 +303,9 @@
     <Compile Include="SalaryBonus.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="SalaryCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="September.cs">
       <SubType>Form</SubType>
     </Compile>
